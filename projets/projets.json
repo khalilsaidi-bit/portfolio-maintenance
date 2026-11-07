@@ -9,8 +9,8 @@
       "titre": "Surveillance multicapteur d'une électropompe",
       "sous_titre": "Quel capteur détecte quel mode de défaillance, avec combien de fausses alarmes ?",
       "equipe": [
-        "Coordinateur (à compléter)",
-        "Binôme (à compléter)"
+        "Khalil Saidi (coordinateur)",
+        "Wassim Bergaoui"
       ],
       "equipement": "Électropompe de banc d'essai (circuit d'eau, variateur, vannes)",
       "tache": "Détection d'anomalies et mesure de la détectabilité (indice D de l'AMDEC)",
