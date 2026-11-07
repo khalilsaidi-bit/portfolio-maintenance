@@ -1,0 +1,43 @@
+{
+  "titre": "Maintenance intelligente & Stratégies 4.0",
+  "sous_titre": "Portfolio numérique — Sûreté de fonctionnement et maintenance",
+  "etablissement": "ENSIT — Cycle ingénieur, 5e année",
+  "annee": "2026-2027",
+  "groupes": [
+    {
+      "nom": "Présentation",
+      "pages": [
+        { "id": "accueil", "num": "", "titre": "Accueil", "fichier": "contenu/00-accueil.md" },
+        { "id": "equipe", "num": "", "titre": "Équipe et organisation", "fichier": "contenu/00-equipe.md" }
+      ]
+    },
+    {
+      "nom": "Notions et méthodes",
+      "pages": [
+        { "id": "maintenance", "num": "1", "titre": "Généralités sur la maintenance industrielle", "fichier": "contenu/01-maintenance.md" },
+        { "id": "sdf", "num": "2", "titre": "Sûreté de fonctionnement et indices FMDS", "fichier": "contenu/02-sdf.md" },
+        { "id": "maintenance40", "num": "3", "titre": "Maintenance 4.0 et GMAO 4.0", "fichier": "contenu/03-maintenance40.md" },
+        { "id": "lean", "num": "4", "titre": "Lean Maintenance : TPM, 5S, RCM, Lean Six Sigma", "fichier": "contenu/04-lean.md" },
+        { "id": "predictive", "num": "5", "titre": "Maintenance prédictive", "fichier": "contenu/05-predictive.md" },
+        { "id": "phm", "num": "6", "titre": "Pronostic et PHM", "fichier": "contenu/06-phm.md" },
+        { "id": "iso50001", "num": "7", "titre": "Management énergétique selon l'ISO 50001", "fichier": "contenu/07-iso50001.md" }
+      ]
+    },
+    {
+      "nom": "Projets",
+      "pages": [
+        { "id": "projets", "num": "", "titre": "Les trois projets", "special": "projets" }
+      ]
+    },
+    {
+      "nom": "Synthèse et annexes",
+      "pages": [
+        { "id": "conclusion", "num": "8", "titre": "Conclusion et perspectives", "fichier": "contenu/08-conclusion.md" },
+        { "id": "methodes", "num": "A", "titre": "Carte des méthodes", "fichier": "contenu/A1-methodes.md" },
+        { "id": "glossaire", "num": "B", "titre": "Glossaire", "fichier": "contenu/A2-glossaire.md" },
+        { "id": "references", "num": "C", "titre": "Références (IEEE)", "fichier": "contenu/A3-references.md" },
+        { "id": "credits", "num": "D", "titre": "Liens utiles et crédits", "fichier": "contenu/A4-credits.md" }
+      ]
+    }
+  ]
+}

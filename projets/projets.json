@@ -1,0 +1,52 @@
+{
+  "_aide": "Trois emplacements. Pour ajouter un projet prêt : remplir l'emplacement libre (voir projets/GUIDE-AJOUT.md). Ne pas supprimer d'emplacement.",
+  "emplacements": [
+    {
+      "id": "projet-1",
+      "repere": "PRJ-01",
+      "libre": false,
+      "statut": "termine",
+      "titre": "Surveillance multicapteur d'une électropompe",
+      "sous_titre": "Quel capteur détecte quel mode de défaillance, avec combien de fausses alarmes ?",
+      "equipe": [
+        "Coordinateur (à compléter)",
+        "Binôme (à compléter)"
+      ],
+      "equipement": "Électropompe de banc d'essai (circuit d'eau, variateur, vannes)",
+      "tache": "Détection d'anomalies et mesure de la détectabilité (indice D de l'AMDEC)",
+      "donnees": "SKAB, Skoltech, 34 expériences réelles, licence GPL-3.0",
+      "outils": [
+        "Python",
+        "pandas",
+        "scikit-learn",
+        "Matplotlib"
+      ],
+      "mots_cles": [
+        "Détection d'anomalies",
+        "T² de Hotelling",
+        "AMDEC",
+        "Capteurs",
+        "Fausses alarmes"
+      ],
+      "resume": "Sur 34 expériences de défaut réelles, les capteurs hydrauliques détectent le mieux les défauts de process, la vibration le balourd, et le courant efficace presque rien. La combinaison vibration + hydraulique détecte le défaut en premier dans 82 % des cas et fait passer l'indice D de l'AMDEC à 1 ou 2 pour 6 modes sur 7.",
+      "page": "projets/projet-1/index.md",
+      "liens": [
+        {
+          "label": "Dataset SKAB (GitHub)",
+          "url": "https://github.com/waico/SKAB"
+        }
+      ],
+      "fichiers": []
+    },
+    {
+      "id": "projet-2",
+      "repere": "PRJ-02",
+      "libre": true
+    },
+    {
+      "id": "projet-3",
+      "repere": "PRJ-03",
+      "libre": true
+    }
+  ]
+}
