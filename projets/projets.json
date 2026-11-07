@@ -9,7 +9,7 @@
       "titre": "Surveillance multicapteur d'une électropompe",
       "sous_titre": "Quel capteur détecte quel mode de défaillance, avec combien de fausses alarmes ?",
       "equipe": [
-        "Khalil Saidi (coordinateur)",
+        "Khalil Saidi",
         "Wassim Bergaoui"
       ],
       "equipement": "Électropompe de banc d'essai (circuit d'eau, variateur, vannes)",

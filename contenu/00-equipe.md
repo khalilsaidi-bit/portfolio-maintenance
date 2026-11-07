@@ -1,12 +1,12 @@
 # Équipe et organisation
 
-> **État :** à compléter par le coordinateur
+> **État :** à compléter par l'équipe
 
 ## Membres
 
 | Membre | Rôle | Sections | Projet |
 |---|---|---|---|
-| Khalil Saidi | Coordinateur | (à attribuer) | PRJ-01 (binôme) |
+| Khalil Saidi | Membre | (à attribuer) | PRJ-01 (binôme) |
 | Wassim Bergaoui | Membre | (à attribuer) | PRJ-01 (binôme) |
 | Jasser Hadj Ali | Membre | (à attribuer) | PRJ-02 (binôme) |
 | Mahmoud Hammouda | Membre | (à attribuer) | PRJ-02 (binôme) |
