@@ -1,0 +1,884 @@
+[
+ {
+  "id": "maintenance",
+  "terme": "Maintenance",
+  "en": "Maintenance",
+  "definition": "Ensemble des actions techniques, administratives et de management, durant le cycle de vie d'un bien, destinées à le maintenir ou à le rétablir dans un état où il peut accomplir la fonction requise (NF EN 13306).",
+  "page": "maintenance",
+  "formes": [],
+  "wiki": "https://fr.wikipedia.org/wiki/Maintenance",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=1L82cY8ocno",
+   "titre": "Différentes formes de la maintenance",
+   "langue": "FR"
+  }
+ },
+ {
+  "id": "maintenance-corrective",
+  "terme": "Maintenance corrective",
+  "en": "Corrective maintenance",
+  "definition": "Maintenance exécutée après la détection d'une panne, pour remettre le bien en état d'accomplir sa fonction. Elle peut être immédiate ou différée, palliative (provisoire) ou curative (définitive).",
+  "page": "maintenance",
+  "formes": [
+   "maintenance corrective"
+  ],
+  "video": {
+   "url": "https://www.youtube.com/watch?v=1L82cY8ocno",
+   "titre": "Différentes formes de la maintenance",
+   "langue": "FR"
+  }
+ },
+ {
+  "id": "maintenance-preventive",
+  "terme": "Maintenance préventive",
+  "en": "Preventive maintenance",
+  "definition": "Maintenance exécutée avant la défaillance, selon un échéancier (systématique) ou selon l'état mesuré du bien (conditionnelle), pour réduire la probabilité de défaillance.",
+  "page": "maintenance",
+  "formes": [
+   "maintenance préventive"
+  ],
+  "video": {
+   "url": "https://www.youtube.com/watch?v=euooAc4rofc",
+   "titre": "La maintenance préventive",
+   "langue": "FR"
+  }
+ },
+ {
+  "id": "maintenance-systematique",
+  "terme": "Maintenance systématique",
+  "en": "Predetermined maintenance",
+  "definition": "Maintenance préventive exécutée à intervalles fixes de temps ou d'usage (heures, cycles), sans contrôle préalable de l'état du bien.",
+  "page": "maintenance",
+  "formes": [
+   "maintenance systématique",
+   "préventive systématique"
+  ]
+ },
+ {
+  "id": "maintenance-conditionnelle",
+  "terme": "Maintenance conditionnelle",
+  "en": "Condition-based maintenance",
+  "definition": "Maintenance préventive déclenchée quand un paramètre surveillé (vibration, température, débit…) franchit un seuil révélateur de dégradation.",
+  "page": "maintenance",
+  "formes": [
+   "maintenance conditionnelle"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Maintenance_conditionnelle"
+ },
+ {
+  "id": "maintenance-previsionnelle",
+  "terme": "Maintenance prévisionnelle (prédictive)",
+  "en": "Predictive maintenance",
+  "definition": "Maintenance conditionnelle fondée sur une prévision de l'évolution de la dégradation : on planifie l'intervention avant que le seuil ne soit atteint.",
+  "page": "predictive",
+  "formes": [
+   "maintenance prévisionnelle",
+   "maintenance prédictive"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Maintenance_pr%C3%A9dictive",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=cNzYBGlRz8E",
+   "titre": "How Predictive Maintenance is Driving Industry 4.0?",
+   "langue": "EN"
+  }
+ },
+ {
+  "id": "defaillance",
+  "terme": "Défaillance",
+  "en": "Failure",
+  "definition": "Événement : perte de l'aptitude d'un bien à accomplir une fonction requise. À distinguer de la panne, qui est l'état qui suit.",
+  "page": "sdf",
+  "formes": [
+   "défaillance",
+   "défaillances"
+  ]
+ },
+ {
+  "id": "panne",
+  "terme": "Panne",
+  "en": "Fault (state)",
+  "definition": "État d'un bien inapte à accomplir une fonction requise. La défaillance est l'instant, la panne est la durée.",
+  "page": "maintenance",
+  "formes": [
+   "panne"
+  ]
+ },
+ {
+  "id": "mode-defaillance",
+  "terme": "Mode de défaillance",
+  "en": "Failure mode",
+  "definition": "Manière dont une défaillance se manifeste (fuite, blocage, absence de signal, dérive). Ne pas confondre avec sa cause ni avec son effet.",
+  "page": "sdf",
+  "formes": [
+   "mode de défaillance",
+   "modes de défaillance"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Mode_de_d%C3%A9faillance"
+ },
+ {
+  "id": "surete-fonctionnement",
+  "terme": "Sûreté de fonctionnement (SdF)",
+  "en": "Dependability",
+  "definition": "Aptitude d'un système à accomplir sa mission avec un niveau de confiance justifié. Elle regroupe fiabilité, maintenabilité, disponibilité et sécurité (FMDS).",
+  "page": "sdf",
+  "formes": [
+   "sûreté de fonctionnement",
+   "SdF"
+  ]
+ },
+ {
+  "id": "fiabilite",
+  "terme": "Fiabilité R(t)",
+  "en": "Reliability",
+  "definition": "Probabilité qu'un bien accomplisse sa fonction, dans des conditions données, pendant un intervalle de temps [0, t] sans défaillance.",
+  "page": "sdf",
+  "formes": [
+   "fiabilité"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Fiabilit%C3%A9"
+ },
+ {
+  "id": "maintenabilite",
+  "terme": "Maintenabilité M(t)",
+  "en": "Maintainability",
+  "definition": "Probabilité qu'une intervention de maintenance soit terminée avant un temps t, dans des conditions données. Indicateur moyen : MTTR.",
+  "page": "sdf",
+  "formes": [
+   "maintenabilité"
+  ]
+ },
+ {
+  "id": "disponibilite",
+  "terme": "Disponibilité A(t)",
+  "en": "Availability",
+  "definition": "Probabilité qu'un bien soit en état d'accomplir sa fonction à un instant donné. En régime permanent : A = MUT / (MUT + MDT).",
+  "page": "sdf",
+  "formes": [
+   "disponibilité"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Disponibilit%C3%A9"
+ },
+ {
+  "id": "mtbf",
+  "terme": "MTBF",
+  "en": "Mean Time Between Failures",
+  "definition": "Temps moyen entre deux défaillances successives d'un bien réparable : MTBF = MUT + MDT.",
+  "page": "maintenance",
+  "formes": [
+   "MTBF"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Temps_moyen_entre_pannes"
+ },
+ {
+  "id": "mttr",
+  "terme": "MTTR",
+  "en": "Mean Time To Repair",
+  "definition": "Temps moyen de réparation active d'un bien. Son inverse est le taux de réparation μ.",
+  "page": "maintenance",
+  "formes": [
+   "MTTR"
+  ]
+ },
+ {
+  "id": "mttf",
+  "terme": "MTTF",
+  "en": "Mean Time To Failure",
+  "definition": "Durée moyenne de fonctionnement avant la première défaillance : MTTF = ∫ R(t) dt.",
+  "page": "sdf",
+  "formes": [
+   "MTTF"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Temps_moyen_de_fonctionnement_avant_panne"
+ },
+ {
+  "id": "mut-mdt",
+  "terme": "MUT et MDT",
+  "en": "Mean Up Time / Mean Down Time",
+  "definition": "MUT : durée moyenne de bon fonctionnement entre deux défaillances. MDT : durée moyenne d'indisponibilité, attente et logistique comprises.",
+  "page": "maintenance",
+  "formes": [
+   "MUT",
+   "MDT"
+  ]
+ },
+ {
+  "id": "taux-defaillance",
+  "terme": "Taux de défaillance λ(t)",
+  "en": "Failure rate (hazard rate)",
+  "definition": "λ(t)·dt est la probabilité qu'un bien ayant survécu jusqu'à t tombe en panne entre t et t + dt. λ(t) = f(t) / R(t).",
+  "page": "sdf",
+  "formes": [
+   "taux de défaillance"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Loi_de_fiabilit%C3%A9"
+ },
+ {
+  "id": "courbe-baignoire",
+  "terme": "Courbe en baignoire",
+  "en": "Bathtub curve",
+  "definition": "Allure typique du taux de défaillance au cours de la vie : décroissant (jeunesse), constant (vie utile), croissant (usure).",
+  "page": "sdf",
+  "formes": [
+   "courbe en baignoire"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Courbe_en_baignoire"
+ },
+ {
+  "id": "weibull",
+  "terme": "Loi de Weibull",
+  "en": "Weibull distribution",
+  "definition": "Loi de durée de vie à deux paramètres : forme β et échelle η. β < 1 : jeunesse ; β = 1 : taux constant ; β > 1 : usure. R(t) = exp(−(t/η)^β).",
+  "page": "sdf",
+  "formes": [
+   "loi de Weibull",
+   "Weibull"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Loi_de_Weibull",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=UhnvPx3_ImQ",
+   "titre": "Introduction to Weibull Analysis for Reliability Engineering",
+   "langue": "EN"
+  }
+ },
+ {
+  "id": "kaplan-meier",
+  "terme": "Estimateur de Kaplan-Meier",
+  "en": "Kaplan-Meier estimator",
+  "definition": "Estimation non paramétrique de la fiabilité à partir de durées de vie observées, qui tient compte des données censurées.",
+  "page": "sdf",
+  "formes": [
+   "Kaplan-Meier"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Estimateur_de_Kaplan-Meier"
+ },
+ {
+  "id": "censure",
+  "terme": "Donnée censurée",
+  "en": "Censored data",
+  "definition": "Durée de vie incomplète : le bien est encore en service à la fin de l'observation, on sait seulement que sa durée de vie dépasse le temps observé.",
+  "page": "sdf",
+  "formes": [
+   "censurée",
+   "censurées",
+   "censure"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Analyse_de_survie"
+ },
+ {
+  "id": "amdec",
+  "terme": "AMDEC",
+  "en": "FMECA",
+  "definition": "Analyse des modes de défaillance, de leurs effets et de leur criticité : méthode inductive qui recense, pour chaque composant, ses modes de défaillance et les hiérarchise par la criticité C = F × G × D.",
+  "page": "sdf",
+  "formes": [
+   "AMDEC"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Analyse_des_modes_de_d%C3%A9faillance,_de_leurs_effets_et_de_leur_criticit%C3%A9",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=bMjMrXhPjHk",
+   "titre": "Qu'est-ce que l'AMDEC ? (La minute métier #4)",
+   "langue": "FR"
+  }
+ },
+ {
+  "id": "criticite",
+  "terme": "Criticité",
+  "en": "Criticality",
+  "definition": "Mesure de l'importance d'un mode de défaillance, combinant fréquence (F), gravité (G) et non-détection (D) : C = F × G × D.",
+  "page": "sdf",
+  "formes": [
+   "criticité"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Criticit%C3%A9"
+ },
+ {
+  "id": "indice-d",
+  "terme": "Indice de détection D",
+  "en": "Detection rating",
+  "definition": "Note de l'AMDEC qui traduit la capacité à détecter un mode de défaillance avant qu'il ne produise son effet (1 : très bien détecté ; 4 ou 10 : non détecté).",
+  "page": "projet-1",
+  "formes": [
+   "indice D",
+   "indice de détection"
+  ]
+ },
+ {
+  "id": "arbre-defaillances",
+  "terme": "Arbre de défaillances",
+  "en": "Fault tree",
+  "definition": "Méthode déductive qui part d'un événement redouté et le décompose, par des portes ET / OU, jusqu'aux événements de base.",
+  "page": "sdf",
+  "formes": [
+   "arbre de défaillances",
+   "arbre des causes"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Arbre_de_d%C3%A9faillances",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=xJJoEV2YGuw",
+   "titre": "Fault Tree Analysis (FTA) Explained with Example",
+   "langue": "EN"
+  }
+ },
+ {
+  "id": "coupe-minimale",
+  "terme": "Coupe minimale",
+  "en": "Minimal cut set",
+  "definition": "Plus petit ensemble d'événements de base dont la réalisation simultanée entraîne l'événement redouté. Une coupe d'ordre 1 est un point faible unique.",
+  "page": "sdf",
+  "formes": [
+   "coupe minimale",
+   "coupes minimales"
+  ],
+  "video": {
+   "url": "https://www.youtube.com/watch?v=kNu6kpnlMEw",
+   "titre": "Minimal Cut-Sets (Explained)",
+   "langue": "EN"
+  }
+ },
+ {
+  "id": "mds",
+  "terme": "Diagramme de succès (MDS)",
+  "en": "Reliability block diagram",
+  "definition": "Représentation du système par des blocs en série ou en parallèle, pour calculer sa fiabilité à partir de celle de ses composants.",
+  "page": "sdf",
+  "formes": [
+   "diagramme de succès",
+   "MDS"
+  ]
+ },
+ {
+  "id": "redondance",
+  "terme": "Redondance",
+  "en": "Redundancy",
+  "definition": "Présence de plusieurs moyens pour accomplir une même fonction. Active : tous fonctionnent en même temps ; passive : le secours démarre en cas de panne.",
+  "page": "sdf",
+  "formes": [
+   "redondance"
+  ]
+ },
+ {
+  "id": "markov",
+  "terme": "Méthode de l'espace des états (Markov)",
+  "en": "Markov analysis",
+  "definition": "Modélisation d'un système par des états (marche, panne…) et des transitions de taux λ et μ, pour calculer disponibilité et fiabilité avec réparations.",
+  "page": "sdf",
+  "formes": [
+   "Markov"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Application_des_cha%C3%AEnes_de_Markov_%C3%A0_la_s%C3%BBret%C3%A9_de_fonctionnement"
+ },
+ {
+  "id": "gmao",
+  "terme": "GMAO",
+  "en": "CMMS",
+  "definition": "Gestion de la maintenance assistée par ordinateur : logiciel qui gère le patrimoine, les ordres de travail, le préventif, les stocks de pièces, les coûts et les indicateurs.",
+  "page": "maintenance40",
+  "formes": [
+   "GMAO"
+  ],
+  "video": {
+   "url": "https://www.youtube.com/watch?v=re6GWQRHU-g",
+   "titre": "Qu'est-ce qu'une GMAO ? (La minute métier #3)",
+   "langue": "FR"
+  }
+ },
+ {
+  "id": "iiot",
+  "terme": "IoT industriel (IIoT)",
+  "en": "Industrial Internet of Things",
+  "definition": "Capteurs et équipements industriels connectés en réseau, qui transmettent en continu des mesures d'état et de process.",
+  "page": "maintenance40",
+  "formes": [
+   "IIoT",
+   "IoT industriel"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Internet_industriel_des_objets"
+ },
+ {
+  "id": "industrie-40",
+  "terme": "Industrie 4.0",
+  "en": "Industry 4.0",
+  "definition": "Organisation de la production autour de systèmes cyber-physiques connectés, de données massives et d'intelligence artificielle.",
+  "page": "maintenance40",
+  "formes": [
+   "Industrie 4.0"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Industrie_4.0"
+ },
+ {
+  "id": "jumeau-numerique",
+  "terme": "Jumeau numérique",
+  "en": "Digital twin",
+  "definition": "Modèle numérique d'un équipement réel, synchronisé avec lui par les données, qui permet de simuler son comportement et d'estimer des grandeurs non mesurées.",
+  "page": "maintenance40",
+  "formes": [
+   "jumeau numérique",
+   "jumeaux numériques"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Jumeau_num%C3%A9rique",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=Ggeuc2m83uE",
+   "titre": "Digital Twin for Predictive Maintenance",
+   "langue": "EN"
+  }
+ },
+ {
+  "id": "cps",
+  "terme": "Système cyber-physique (CPS)",
+  "en": "Cyber-physical system",
+  "definition": "Équipement physique couplé à sa représentation numérique, qui communique avec d'autres systèmes et avec les logiciels de gestion.",
+  "page": "maintenance40",
+  "formes": [
+   "systèmes cyber-physiques",
+   "système cyber-physique"
+  ]
+ },
+ {
+  "id": "tpm",
+  "terme": "TPM",
+  "en": "Total Productive Maintenance",
+  "definition": "Démarche japonaise d'efficacité globale des équipements, qui implique tout le personnel. Elle repose sur huit piliers et vise « zéro panne, zéro défaut, zéro accident ».",
+  "page": "lean",
+  "formes": [
+   "TPM"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Maintenance_Productive_Totale",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=RkLtIa4a51Y",
+   "titre": "Les 8 piliers de la TPM",
+   "langue": "FR"
+  }
+ },
+ {
+  "id": "trs",
+  "terme": "TRS (OEE)",
+  "en": "Overall Equipment Effectiveness",
+  "definition": "Taux de rendement synthétique : TRS = disponibilité × performance × qualité. Il agrège les six grandes pertes d'un équipement.",
+  "page": "lean",
+  "formes": [
+   "TRS",
+   "OEE"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Taux_de_rendement_synth%C3%A9tique",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=HBn8_vOpTYE",
+   "titre": "Initiation au TRS (OEE)",
+   "langue": "FR"
+  }
+ },
+ {
+  "id": "5s",
+  "terme": "5S",
+  "en": "5S",
+  "definition": "Méthode d'organisation du poste en cinq étapes : trier, ranger, nettoyer, standardiser, faire durer. Socle de la TPM.",
+  "page": "lean",
+  "formes": [
+   "5S"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/5S",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=Nf_DjH9RX1Y",
+   "titre": "5S Methodology Explained",
+   "langue": "EN"
+  }
+ },
+ {
+  "id": "lean",
+  "terme": "Lean",
+  "en": "Lean manufacturing",
+  "definition": "Démarche d'amélioration qui cherche à éliminer les gaspillages (attentes, stocks, déplacements, défauts…) pour ne garder que ce qui apporte de la valeur.",
+  "page": "lean",
+  "formes": [
+   "Lean"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Lean_(production)"
+ },
+ {
+  "id": "rcm",
+  "terme": "RCM",
+  "en": "Reliability-Centred Maintenance",
+  "definition": "Maintenance basée sur la fiabilité : méthode qui choisit, pour chaque mode de défaillance, la tâche de maintenance la plus efficace selon ses conséquences.",
+  "page": "lean",
+  "formes": [
+   "RCM"
+  ],
+  "video": {
+   "url": "https://www.youtube.com/watch?v=tNYiCOGuuNA",
+   "titre": "The Philosophy of Reliability Centered Maintenance",
+   "langue": "EN"
+  }
+ },
+ {
+  "id": "six-sigma",
+  "terme": "Lean Six Sigma / DMAIC",
+  "en": "Lean Six Sigma",
+  "definition": "Démarche de résolution de problèmes fondée sur les données, en cinq phases : définir, mesurer, analyser, améliorer, maîtriser (DMAIC).",
+  "page": "lean",
+  "formes": [
+   "Six Sigma",
+   "DMAIC"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Six_Sigma",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=YQ8QD9hX-f0",
+   "titre": "Comprendre la méthodologie DMAIC",
+   "langue": "FR"
+  }
+ },
+ {
+  "id": "courbe-pf",
+  "terme": "Courbe P-F",
+  "en": "P-F curve",
+  "definition": "Évolution de l'état d'un équipement entre P, instant où la dégradation devient détectable, et F, défaillance fonctionnelle. L'intervalle P-F est le temps disponible pour intervenir.",
+  "page": "predictive",
+  "formes": [
+   "courbe P-F",
+   "intervalle P-F"
+  ],
+  "video": {
+   "url": "https://www.youtube.com/watch?v=6j25nT5Wg1k",
+   "titre": "Intro to the Maintenance P-F Curve",
+   "langue": "EN"
+  }
+ },
+ {
+  "id": "analyse-vibratoire",
+  "terme": "Analyse vibratoire",
+  "en": "Vibration analysis",
+  "definition": "Surveillance d'une machine par la mesure de ses vibrations (niveau global, spectre) pour détecter et identifier balourd, désalignement, défauts de roulements…",
+  "page": "predictive",
+  "formes": [
+   "analyse vibratoire"
+  ],
+  "video": {
+   "url": "https://www.youtube.com/watch?v=sIiXd-t46Y8",
+   "titre": "What is Vibration Analysis? The Basics",
+   "langue": "EN"
+  }
+ },
+ {
+  "id": "rms",
+  "terme": "Valeur efficace (RMS)",
+  "en": "Root mean square",
+  "definition": "Racine de la moyenne des carrés d'un signal : mesure de son énergie. C'est l'indicateur global de sévérité vibratoire.",
+  "page": "predictive",
+  "formes": [
+   "valeur efficace",
+   "valeurs efficaces"
+  ]
+ },
+ {
+  "id": "kurtosis",
+  "terme": "Kurtosis",
+  "en": "Kurtosis",
+  "definition": "Moment d'ordre 4 normalisé d'un signal ; il vaut 3 pour un signal gaussien et augmente avec les chocs (défaut de roulement localisé).",
+  "page": "predictive",
+  "formes": [
+   "kurtosis"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Kurtosis"
+ },
+ {
+  "id": "fft",
+  "terme": "FFT",
+  "en": "Fast Fourier Transform",
+  "definition": "Algorithme de calcul du spectre d'un signal échantillonné : il montre l'amplitude de chaque fréquence et permet d'identifier un défaut par sa fréquence.",
+  "page": "predictive",
+  "formes": [
+   "FFT"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Transformation_de_Fourier_rapide"
+ },
+ {
+  "id": "shannon",
+  "terme": "Théorème d'échantillonnage (Shannon)",
+  "en": "Sampling theorem",
+  "definition": "Pour représenter un signal sans perte, il faut l'échantillonner à une fréquence supérieure au double de sa plus haute fréquence.",
+  "page": "predictive",
+  "formes": [
+   "théorème de Shannon"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_d%27%C3%A9chantillonnage"
+ },
+ {
+  "id": "repliement",
+  "terme": "Repliement spectral",
+  "en": "Aliasing",
+  "definition": "Apparition de fréquences fantômes quand l'échantillonnage est trop lent. On l'évite par un filtre anti-repliement avant la numérisation.",
+  "page": "predictive",
+  "formes": [
+   "repliement spectral",
+   "anti-repliement"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Repliement_de_spectre"
+ },
+ {
+  "id": "mcsa",
+  "terme": "MCSA (analyse du courant moteur)",
+  "en": "Motor Current Signature Analysis",
+  "definition": "Diagnostic d'un moteur et de la machine entraînée par l'analyse spectrale de son courant d'alimentation, mesuré dans l'armoire électrique.",
+  "page": "predictive",
+  "formes": [
+   "MCSA",
+   "analyse du courant moteur"
+  ],
+  "video": {
+   "url": "https://www.youtube.com/watch?v=ZzkwJnmJ_eM",
+   "titre": "What Is Motor Current Signature Analysis (MCSA)?",
+   "langue": "EN"
+  }
+ },
+ {
+  "id": "thermographie",
+  "terme": "Thermographie infrarouge",
+  "en": "Infrared thermography",
+  "definition": "Mesure sans contact de la température de surface par caméra infrarouge, pour repérer échauffements électriques et frottements.",
+  "page": "predictive",
+  "formes": [
+   "thermographie"
+  ],
+  "video": {
+   "url": "https://www.youtube.com/watch?v=3tuUnhI5Dnw",
+   "titre": "Thermographie infrarouge pour la maintenance préventive des réseaux électriques",
+   "langue": "FR"
+  }
+ },
+ {
+  "id": "balourd",
+  "terme": "Balourd",
+  "en": "Unbalance",
+  "definition": "Répartition non homogène de la masse d'un rotor autour de son axe. Il produit une vibration à la fréquence de rotation (1 × f_r).",
+  "page": "predictive",
+  "formes": [
+   "balourd"
+  ],
+  "video": {
+   "url": "https://www.youtube.com/watch?v=3tksswC8oVo",
+   "titre": "Vibration Analysis Basics: Identifying Misalignment & Unbalance",
+   "langue": "EN"
+  }
+ },
+ {
+  "id": "cavitation",
+  "terme": "Cavitation",
+  "en": "Cavitation",
+  "definition": "Formation puis implosion de bulles de vapeur dans une pompe quand la pression à l'aspiration devient trop faible. Elle érode l'impulseur et fait chuter le débit.",
+  "page": "predictive",
+  "formes": [
+   "cavitation"
+  ]
+ },
+ {
+  "id": "phm",
+  "terme": "PHM",
+  "en": "Prognostics and Health Management",
+  "definition": "Ensemble des méthodes qui évaluent l'état de santé d'un système, prévoient son évolution et en déduisent des décisions de maintenance.",
+  "page": "phm",
+  "formes": [
+   "PHM"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Pronostic_de_d%C3%A9faillance",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=QW7Xw1vSvFs",
+   "titre": "A Brief Overview of Prognostics and Health Management",
+   "langue": "EN"
+  }
+ },
+ {
+  "id": "pronostic",
+  "terme": "Pronostic",
+  "en": "Prognosis",
+  "definition": "Estimation de l'évolution future de l'état d'un équipement et du temps restant avant sa défaillance.",
+  "page": "phm",
+  "formes": [
+   "pronostic"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Pronostic_de_d%C3%A9faillance"
+ },
+ {
+  "id": "rul",
+  "terme": "RUL (durée de vie résiduelle)",
+  "en": "Remaining Useful Life",
+  "definition": "Temps restant avant la défaillance, sachant l'état actuel et les conditions d'utilisation futures. Elle s'estime avec un intervalle de confiance.",
+  "page": "phm",
+  "formes": [
+   "RUL",
+   "durée de vie résiduelle"
+  ],
+  "video": {
+   "url": "https://www.youtube.com/watch?v=hRpfsRBszz4",
+   "titre": "Remaining Useful Life (RUL) Estimation Methodologies",
+   "langue": "EN"
+  }
+ },
+ {
+  "id": "indicateur-sante",
+  "terme": "Indicateur de santé",
+  "en": "Health indicator",
+  "definition": "Grandeur calculée à partir des mesures, qui évolue de façon monotone avec la dégradation et sert de base au pronostic.",
+  "page": "phm",
+  "formes": [
+   "indicateur de santé"
+  ]
+ },
+ {
+  "id": "detection-anomalies",
+  "terme": "Détection d'anomalies",
+  "en": "Anomaly detection",
+  "definition": "Repérer un comportement qui s'écarte du fonctionnement normal, en apprenant ce fonctionnement normal sans avoir besoin d'exemples de défauts.",
+  "page": "projet-1",
+  "formes": [
+   "détection d'anomalies"
+  ]
+ },
+ {
+  "id": "t2",
+  "terme": "T² de Hotelling",
+  "en": "Hotelling's T²",
+  "definition": "Statistique multivariée qui mesure l'écart d'une observation à la moyenne de référence en tenant compte des corrélations (distance de Mahalanobis au carré).",
+  "page": "projet-1",
+  "formes": [
+   "T² de Hotelling"
+  ],
+  "video": {
+   "url": "https://www.youtube.com/watch?v=RmktDvMrhGw",
+   "titre": "Hotelling's T-square explained with a simple example",
+   "langue": "EN"
+  }
+ },
+ {
+  "id": "mahalanobis",
+  "terme": "Distance de Mahalanobis",
+  "en": "Mahalanobis distance",
+  "definition": "Distance d'un point à une distribution qui tient compte de la variance de chaque variable et de leurs corrélations.",
+  "page": "projet-1",
+  "formes": [
+   "distance de Mahalanobis",
+   "Mahalanobis"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/Distance_de_Mahalanobis"
+ },
+ {
+  "id": "isolation-forest",
+  "terme": "Isolation Forest",
+  "en": "Isolation Forest",
+  "definition": "Algorithme de détection d'anomalies qui isole les points par des coupures aléatoires : un point anormal s'isole en peu de coupures.",
+  "page": "projet-1",
+  "formes": [
+   "Isolation Forest"
+  ],
+  "video": {
+   "url": "https://www.youtube.com/watch?v=Y1x51i1936M",
+   "titre": "Isolation Forests: Identify Outliers in Data",
+   "langue": "EN"
+  }
+ },
+ {
+  "id": "fuite-donnees",
+  "terme": "Fuite de données",
+  "en": "Data leakage",
+  "definition": "Erreur de validation où des informations du jeu de test se retrouvent dans l'apprentissage, ce qui gonfle artificiellement les performances.",
+  "page": "predictive",
+  "formes": [
+   "fuite de données"
+  ]
+ },
+ {
+  "id": "score-f1",
+  "terme": "Score F1",
+  "en": "F1 score",
+  "definition": "Moyenne harmonique de la précision et du rappel d'un détecteur ou d'un classifieur.",
+  "page": "projet-1",
+  "formes": [
+   "score F1"
+  ]
+ },
+ {
+  "id": "detection-stricte",
+  "terme": "Détection stricte",
+  "en": "Strict detection (project metric)",
+  "definition": "Métrique du projet PRJ-01 : une expérience compte comme détectée si la toute première alarme tombe pendant le défaut.",
+  "page": "projet-1",
+  "formes": [
+   "détection stricte"
+  ]
+ },
+ {
+  "id": "iso-50001",
+  "terme": "ISO 50001",
+  "en": "ISO 50001",
+  "definition": "Norme internationale des systèmes de management de l'énergie, fondée sur le cycle PDCA, qui exige d'améliorer et de démontrer la performance énergétique.",
+  "page": "iso50001",
+  "formes": [
+   "ISO 50001"
+  ],
+  "wiki": "https://fr.wikipedia.org/wiki/ISO_50001",
+  "video": {
+   "url": "https://www.youtube.com/watch?v=-LV0aVXhkl0",
+   "titre": "What is ISO 50001 (Energy Management Systems)",
+   "langue": "EN"
+  }
+ },
+ {
+  "id": "ipe",
+  "terme": "IPÉ",
+  "en": "Energy Performance Indicator (EnPI)",
+  "definition": "Indicateur de performance énergétique, par exemple les kWh consommés par m³ pompé.",
+  "page": "iso50001",
+  "formes": [
+   "IPÉ",
+   "indicateur de performance énergétique"
+  ]
+ },
+ {
+  "id": "ser",
+  "terme": "Situation énergétique de référence",
+  "en": "Energy baseline (EnB)",
+  "definition": "Consommation de référence, ajustée aux variables pertinentes (production, météo), à laquelle on compare la consommation pour mesurer les économies.",
+  "page": "iso50001",
+  "formes": [
+   "situation énergétique de référence"
+  ]
+ },
+ {
+  "id": "ues",
+  "terme": "Usage énergétique significatif (UES)",
+  "en": "Significant Energy Use",
+  "definition": "Usage qui pèse fortement dans la consommation d'énergie ou qui offre un potentiel d'amélioration important.",
+  "page": "iso50001",
+  "formes": [
+   "usage énergétique significatif",
+   "usages énergétiques significatifs"
+  ]
+ },
+ {
+  "id": "pdca",
+  "terme": "PDCA",
+  "en": "Plan-Do-Check-Act",
+  "definition": "Cycle d'amélioration continue : planifier, réaliser, vérifier, agir. Il structure les normes de systèmes de management.",
+  "page": "iso50001",
+  "formes": [
+   "PDCA"
+  ]
+ },
+ {
+  "id": "iso-55000",
+  "terme": "ISO 55000",
+  "en": "ISO 55000",
+  "definition": "Famille de normes sur la gestion d'actifs : arbitrer coûts, risques et performance sur tout le cycle de vie des équipements.",
+  "page": "maintenance",
+  "formes": [
+   "ISO 55000"
+  ]
+ },
+ {
+  "id": "capabilite",
+  "terme": "Capabilité machine",
+  "en": "Machine capability",
+  "definition": "Rapport entre l'intervalle de tolérance et la dispersion d'une machine (Cm, Cmk). Une baisse peut signaler une dégradation.",
+  "page": "maintenance",
+  "formes": [
+   "capabilité"
+  ]
+ }
+]

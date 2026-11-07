@@ -147,13 +147,19 @@ Ces démarches se combinent. Les 5S et la TPM créent les conditions de terrain.
 - **Étiquetage des anomalies** : les opérateurs signalent les anomalies par une étiquette sur la machine ; leur traitement est suivi en réunion courte.
 - **Rationalisation du préventif** : supprimer les tâches sans effet démontré, identifiées par la RCM, et réaffecter le temps libéré à la surveillance conditionnelle.
 
+## Vidéos et ressources
+
+Sélection de l'équipe pour approfondir cette partie. Les vidéos appartiennent à leurs auteurs et s'ouvrent sur YouTube.
+
+<ul class="res"><li><span><a href="https://www.youtube.com/watch?v=RkLtIa4a51Y" target="_blank" rel="noopener">Les 8 piliers de la TPM</a> <span class="src">· vidéo, français</span></span></li><li><span><a href="https://www.youtube.com/watch?v=2CHdmonBjx0" target="_blank" rel="noopener">The 8 Pillars of Total Productive Maintenance (TPM)</a> <span class="src">· vidéo, anglais</span></span></li><li><span><a href="https://www.youtube.com/watch?v=HBn8_vOpTYE" target="_blank" rel="noopener">Initiation au TRS (OEE), partie 2</a> <span class="src">· vidéo, français</span></span></li><li><span><a href="https://www.youtube.com/watch?v=gKnp29p0G98" target="_blank" rel="noopener">Calculating OEE: Availability, Performance + Quality</a> <span class="src">· vidéo, anglais</span></span></li><li><span><a href="https://www.youtube.com/watch?v=Nf_DjH9RX1Y" target="_blank" rel="noopener">5S Methodology Explained</a> <span class="src">· vidéo, anglais</span></span></li><li><span><a href="https://www.youtube.com/watch?v=tNYiCOGuuNA" target="_blank" rel="noopener">The Philosophy of Reliability Centered Maintenance</a> <span class="src">· vidéo, anglais</span></span></li><li><span><a href="https://www.youtube.com/watch?v=YQ8QD9hX-f0" target="_blank" rel="noopener">Comprendre la méthodologie DMAIC</a> <span class="src">· vidéo, français</span></span></li><li><span><a href="https://www.youtube.com/watch?v=Niyn3AZAgfE" target="_blank" rel="noopener">Lean Six Sigma : 10 minutes pour comprendre toute la méthodologie</a> <span class="src">· vidéo, français</span></span></li></ul>
+
 ## Références
 
 <ol class="refs">
-<li>[1] S. Nakajima, <i>Introduction to TPM: Total Productive Maintenance</i>. Cambridge, MA : Productivity Press, 1988.</li>
-<li>[2] F. S. Nowlan et H. F. Heap, « Reliability-Centered Maintenance », U.S. Department of Defense, rapport AD-A066579, 1978.</li>
-<li>[3] SAE International, <i>SAE JA1011 — Evaluation Criteria for Reliability-Centered Maintenance (RCM) Processes</i>, révision d’août 2009.</li>
-<li>[4] J. Moubray, <i>Reliability-Centred Maintenance</i>, 2ᵉ éd. Oxford : Butterworth-Heinemann, 1997.</li>
-<li>[5] F. Ben Hmida, <i>Maintenance industrielle — Chap. 3 : Lean Maintenance</i>, support de cours, 2024.</li>
-<li>[6] J.-F. Barbet, « Tour d'horizon des méthodes d'optimisation de maintenance », formation OMF, INSA, 2021.</li>
+<li>[1] S. Nakajima, <i>Introduction to TPM: Total Productive Maintenance</i>. Cambridge, MA : Productivity Press, 1988. <a class="reflink" href="https://scholar.google.com/scholar?q=Nakajima%20Introduction%20to%20TPM%20Total%20Productive%20Maintenance" target="_blank" rel="noopener">Google Scholar ↗</a></li>
+<li>[2] F. S. Nowlan et H. F. Heap, « Reliability-Centered Maintenance », U.S. Department of Defense, rapport AD-A066579, 1978. <a class="reflink" href="https://scholar.google.com/scholar?q=Nowlan%20Heap%20Reliability-Centered%20Maintenance%201978" target="_blank" rel="noopener">Google Scholar ↗</a></li>
+<li>[3] SAE International, <i>SAE JA1011 — Evaluation Criteria for Reliability-Centered Maintenance (RCM) Processes</i>, révision d’août 2009. <a class="reflink" href="https://saemobilus.sae.org/standards/ja1011_200908-evaluation-criteria-reliability-centered-maintenance-rcm-processes" target="_blank" rel="noopener">SAE ↗</a></li>
+<li>[4] J. Moubray, <i>Reliability-Centred Maintenance</i>, 2ᵉ éd. Oxford : Butterworth-Heinemann, 1997. <a class="reflink" href="https://scholar.google.com/scholar?q=Moubray%20Reliability-Centred%20Maintenance" target="_blank" rel="noopener">Google Scholar ↗</a></li>
+<li>[5] F. Ben Hmida, <i>Maintenance industrielle — Chap. 3 : Lean Maintenance</i>, support de cours, 2024. <span class="refnote">(document de cours, non publié en ligne)</span></li>
+<li>[6] J.-F. Barbet, « Tour d'horizon des méthodes d'optimisation de maintenance », formation OMF, INSA, 2021. <span class="refnote">(document de formation, non publié en ligne)</span></li>
 </ol>

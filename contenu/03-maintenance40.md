@@ -101,14 +101,20 @@ Les principaux freins sont les suivants :
 - **Interopérabilité** : protocoles et formats différents entre les machines, les automates et les logiciels.
 - **Compétences** : il faut faire travailler ensemble la maintenance, l'informatique industrielle et la science des données.
 
+## Vidéos et ressources
+
+Sélection de l'équipe pour approfondir cette partie. Les vidéos appartiennent à leurs auteurs et s'ouvrent sur YouTube.
+
+<ul class="res"><li><span><a href="https://www.youtube.com/watch?v=re6GWQRHU-g" target="_blank" rel="noopener">Qu'est-ce qu'une GMAO ? (La minute métier #3)</a> <span class="src">· vidéo, français</span></span></li><li><span><a href="https://www.youtube.com/watch?v=WhKFKDIjZP0" target="_blank" rel="noopener">C'est quoi la GMAO ? Définition, avantages et fonctionnalités</a> <span class="src">· vidéo, français</span></span></li><li><span><a href="https://www.youtube.com/watch?v=Ggeuc2m83uE" target="_blank" rel="noopener">Digital Twin for Predictive Maintenance</a> <span class="src">· vidéo, anglais</span></span></li><li><span><a href="https://www.youtube.com/watch?v=LDBE1P3pxMs" target="_blank" rel="noopener">Digital Twins and the Future of Industry 4.0</a> <span class="src">· vidéo, anglais</span></span></li><li class="doc"><span><a href="https://en.acatech.de/publication/recommendations-for-implementing-the-strategic-initiative-industrie-4-0-final-report-of-the-industrie-4-0-working-group/" target="_blank" rel="noopener">Rapport fondateur « Industrie 4.0 » (acatech, 2013)</a> <span class="src">· acatech</span></span></li><li class="doc"><span><a href="https://fr.wikipedia.org/wiki/Internet_industriel_des_objets" target="_blank" rel="noopener">Internet industriel des objets</a> <span class="src">· Wikipédia</span></span></li></ul>
+
 ## Références
 
 <ol class="refs">
-<li>[1] H. Kagermann, W. Wahlster et J. Helbig, <i>Recommendations for implementing the strategic initiative INDUSTRIE 4.0</i>, rapport final du groupe de travail Industrie 4.0. Francfort : acatech, avril 2013.</li>
-<li>[2] J. Lee, B. Bagheri et H.-A. Kao, « A Cyber-Physical Systems architecture for Industry 4.0-based manufacturing systems », <i>Manufacturing Letters</i>, vol. 3, p. 18-23, 2015.</li>
-<li>[3] F. Tao, H. Zhang, A. Liu et A. Y. C. Nee, « Digital Twin in Industry: State-of-the-Art », <i>IEEE Trans. Ind. Informat.</i>, vol. 15, n° 4, p. 2405-2415, 2019.</li>
-<li>[4] Schneider Electric, « Schneider Electric transforme son site du Vaudreuil en vitrine de l'Industrie du Futur grâce à ses offres EcoStruxure for Industry », communiqué de presse, 3 avr. 2018. [En ligne]. Disponible : https://www.se.com/ww/fr/about-us/newsroom/news/press-releases/</li>
-<li>[5] Schneider Electric, « New recognition for Schneider Electric from World Economic Forum », communiqué de presse, mars 2022. [En ligne]. Disponible : https://www.se.com/ww/en/about-us/newsroom/</li>
-<li>[6] McKinsey &amp; Company, « Manufacturing: Analytics unleashes productivity and profitability », 2017.</li>
-<li>[7] F. Ben Hmida, <i>Maintenance industrielle — Chap. 2 : Maintenance 4.0</i>, support de cours, 2024.</li>
+<li>[1] H. Kagermann, W. Wahlster et J. Helbig, <i>Recommendations for implementing the strategic initiative INDUSTRIE 4.0</i>, rapport final du groupe de travail Industrie 4.0. Francfort : acatech, avril 2013. <a class="reflink" href="https://en.acatech.de/publication/recommendations-for-implementing-the-strategic-initiative-industrie-4-0-final-report-of-the-industrie-4-0-working-group/" target="_blank" rel="noopener">acatech ↗</a></li>
+<li>[2] J. Lee, B. Bagheri et H.-A. Kao, « A Cyber-Physical Systems architecture for Industry 4.0-based manufacturing systems », <i>Manufacturing Letters</i>, vol. 3, p. 18-23, 2015. <a class="reflink" href="https://doi.org/10.1016/j.mfglet.2014.12.001" target="_blank" rel="noopener">DOI ↗</a></li>
+<li>[3] F. Tao, H. Zhang, A. Liu et A. Y. C. Nee, « Digital Twin in Industry: State-of-the-Art », <i>IEEE Trans. Ind. Informat.</i>, vol. 15, n° 4, p. 2405-2415, 2019. <a class="reflink" href="https://doi.org/10.1109/TII.2018.2873186" target="_blank" rel="noopener">DOI ↗</a></li>
+<li>[4] Schneider Electric, « Schneider Electric transforme son site du Vaudreuil en vitrine de l'Industrie du Futur grâce à ses offres EcoStruxure for Industry », communiqué de presse, 3 avr. 2018. <a class="reflink" href="https://www.se.com/ww/fr/about-us/newsroom/news/press-releases/Schneider-Electric-transforme-son-site-du-Vaudreuil-en-Vitrine-de-l%E2%80%99Industrie-du-Futur-gr%C3%A2ce-%C3%A0-ses-offres-EcoStruxure-for-Industry-5ac34a942d40ce13495f6e07" target="_blank" rel="noopener">Schneider Electric ↗</a></li>
+<li>[5] Schneider Electric, « New recognition for Schneider Electric from World Economic Forum », communiqué de presse, mars 2022. <a class="reflink" href="https://www.se.com/ww/en/about-us/newsroom/news/press-releases/new-recognition-for-schneider-electric-from-world-economic-forum-62441e75d32cd17e7b1f0ab4" target="_blank" rel="noopener">Schneider Electric ↗</a></li>
+<li>[6] McKinsey &amp; Company, « Manufacturing: Analytics unleashes productivity and profitability », 2017. <a class="reflink" href="https://www.google.com/search?q=McKinsey%20Manufacturing%3A%20Analytics%20unleashes%20productivity%20and%20profitability%202017" target="_blank" rel="noopener">Rechercher ↗</a></li>
+<li>[7] F. Ben Hmida, <i>Maintenance industrielle — Chap. 2 : Maintenance 4.0</i>, support de cours, 2024. <span class="refnote">(document de cours, non publié en ligne)</span></li>
 </ol>

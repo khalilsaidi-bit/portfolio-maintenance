@@ -222,6 +222,7 @@ main { min-width: 0; padding-block: var(--s-7); padding-left: max(var(--s-6), en
 
 /* Figures */
 .fig { margin: var(--s-5) 0 var(--s-6); padding: var(--s-4); background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; overflow-x: auto; }
+@media (max-width: 900px) { .g-outils { position: static; } }
 @media (max-width: 640px) { .md table { min-width: 34rem; } .fig svg { min-width: 34rem; } .fig figcaption { position: sticky; left: 0; max-width: calc(100vw - 4rem); } }
 .fig svg { display: block; width: 100%; height: auto; max-width: 100%; min-width: 0; overflow: visible; }
 .fig figcaption { margin-top: var(--s-3); font-size: 0.82rem; color: var(--muted); line-height: 1.45; }
@@ -254,6 +255,44 @@ main { min-width: 0; padding-block: var(--s-7); padding-left: max(var(--s-6), en
 .md .formula { font-family: var(--f-mono); font-size: 0.92rem; background: var(--code-bg); padding: var(--s-3) var(--s-4); border-radius: 4px; overflow-x: auto; white-space: pre; margin: 0 0 var(--s-4); }
 .md .refs { font-size: 0.86rem; } .md .refs li { margin-bottom: var(--s-2); }
 .md .note { font-size: 0.86rem; color: var(--muted); }
+
+/* Termes du glossaire, citations, bulle, ressources */
+.gl { font: inherit; color: inherit; background: none; border: 0; padding: 0; margin: 0; cursor: pointer; text-decoration: underline dotted var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 0.2em; border-radius: 2px; }
+.gl:hover, .gl[aria-expanded="true"] { background: var(--accent-soft); }
+a.cite { text-decoration: none; font-size: 0.9em; }
+a.cite:hover { text-decoration: underline; }
+.md .refs a.reflink { white-space: nowrap; font-size: 0.85em; }
+.md ol.refs { list-style: none; padding-left: 0; }
+.g-entry, .g-groupe, ol.refs li { scroll-margin-top: 10rem; }
+.md .refs .refnote { color: var(--muted); font-size: 0.85em; }
+.flash { animation: flash 1.6s ease-out; }
+@keyframes flash { from { background: var(--signal-soft); } to { background: transparent; } }
+.bulle { position: absolute; z-index: 20; width: min(24rem, calc(100vw - 24px)); background: var(--surface); color: var(--ink); border: 1px solid var(--rule); border-radius: 6px; box-shadow: 0 8px 28px rgba(0,0,0,.18); padding: var(--s-4); font-size: 0.9rem; line-height: 1.5; }
+.bulle.bas { position: fixed; left: 0; right: 0; bottom: 0; top: auto; width: auto; border-radius: 10px 10px 0 0; padding-bottom: calc(var(--s-4) + env(safe-area-inset-bottom, 0px)); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.bulle-x { position: absolute; top: 6px; right: 8px; font: inherit; font-size: 1.2rem; line-height: 1; background: none; border: 0; color: var(--muted); cursor: pointer; padding: 4px 6px; }
+.bulle-t { margin: 0 1.5rem var(--s-2) 0; font-weight: 600; }
+.bulle-t span { font-weight: 400; font-style: italic; color: var(--muted); }
+.bulle-d { margin: 0 0 var(--s-3); }
+.bulle-l, .g-liens { display: flex; flex-wrap: wrap; gap: var(--s-2); margin: 0; }
+.bulle-l a, .g-liens a { font-size: 0.82rem; padding: 0.15rem 0.55rem; border: 1px solid var(--rule); border-radius: 999px; text-decoration: none; background: var(--paper); }
+.bulle-l a:hover, .g-liens a:hover { border-color: var(--accent); }
+.g-outils { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 2; background: var(--paper); padding-block: var(--s-3); display: grid; gap: var(--s-2); margin-bottom: var(--s-4); }
+.g-label { font-size: 0.82rem; font-weight: 500; }
+#g-search { font: inherit; font-size: 0.95rem; color: var(--ink); background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 0.55rem 0.7rem; width: 100%; }
+.g-lettres { display: flex; flex-wrap: wrap; gap: 2px; }
+.g-lettres a { font-family: var(--f-mono); font-size: 0.8rem; padding: 0.1rem 0.45rem; text-decoration: none; border-radius: 3px; }
+.g-lettres a:hover { background: var(--accent-soft); }
+.g-lettre { font-family: var(--f-display); font-size: 1.6rem; margin: var(--s-5) 0 var(--s-2); padding-top: var(--s-2); border-top: 1px solid var(--rule); }
+.g-entry { padding: var(--s-3) 0; border-bottom: 1px dashed var(--rule); }
+.g-entry h3 { margin: 0 0 var(--s-1); font-size: 1rem; }
+.g-en { font-weight: 400; font-style: italic; color: var(--muted); font-size: 0.9rem; }
+.g-entry p { margin: 0 0 var(--s-2); }
+.g-vide { color: var(--muted); }
+.md ul.res { list-style: none; padding: 0; display: grid; gap: var(--s-2); }
+.md ul.res li { display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); gap: var(--s-2); align-items: baseline; margin: 0; }
+.md ul.res li::before { content: "▶"; color: var(--accent); font-size: 0.8rem; }
+.md ul.res li.doc::before { content: "↗"; }
+.md ul.res .src { color: var(--muted); font-size: 0.85rem; }
 
 @media (max-width: 1080px) { .plates { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 900px) {
@@ -411,8 +450,10 @@ main { min-width: 0; padding-block: var(--s-7); padding-left: max(var(--s-6), en
   }
 
   function show(html, wide) {
+    fermerBulle();
     main.innerHTML = '<div class="page' + (wide ? " wide" : "") + '">' + html + "</div>";
     window.scrollTo(0, 0);
+    enrichir();
   }
 
   /* Rendus */
@@ -514,15 +555,220 @@ main { min-width: 0; padding-block: var(--s-7); padding-left: max(var(--s-6), en
     return '<div class="field"><label for="' + id + '">' + esc(label) + "</label>" + ctl + (hint ? '<span class="hint">' + esc(hint) + "</span>" : "") + "</div>";
   }
 
+  /* ---------- Glossaire, termes cliquables, citations ---------- */
+  function preparerGlossaire(liste) {
+    state.gloss = liste || [];
+    state.glossById = {};
+    var formes = [];
+    state.gloss.forEach(function (t) {
+      state.glossById[t.id] = t;
+      (t.formes || []).forEach(function (f) { formes.push({ f: f, id: t.id }); });
+    });
+    formes.sort(function (x, y) { return y.f.length - x.f.length; });
+    state.glossForme = {};
+    formes.forEach(function (x) { state.glossForme[x.f.toLowerCase()] = x.id; });
+    if (!formes.length) { state.glossRe = null; return; }
+    var alt = formes.map(function (x) { return x.f.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }).join("|");
+    try { state.glossRe = new RegExp("(?<![\\p{L}\\p{N}])(" + alt + ")(?![\\p{L}\\p{N}])", "giu"); }
+    catch (e) { state.glossRe = new RegExp("(^|[^A-Za-zÀ-ÿ0-9])(" + alt + ")(?![A-Za-zÀ-ÿ0-9])", "gi"); state.glossCompat = true; }
+  }
+
+  var EXCLUS = "a, button, code, pre, h1, h2, h3, h4, figure, svg, th, .refs, .g-entry, .proj-head, .eyebrow, label";
+
+  function lierTermes(racine, pageId) {
+    if (!state.glossRe) return;
+    var vus = {};
+    var walker = document.createTreeWalker(racine, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        if (!n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        return n.parentElement && n.parentElement.closest(EXCLUS) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var noeuds = [];
+    while (walker.nextNode()) noeuds.push(walker.currentNode);
+    noeuds.forEach(function (n) {
+      var txt = n.nodeValue, re = state.glossRe, m, dernier = 0, frag = null;
+      re.lastIndex = 0;
+      while ((m = re.exec(txt))) {
+        var mot = state.glossCompat ? m[2] : m[1];
+        var debut = state.glossCompat ? m.index + m[1].length : m.index;
+        var id = state.glossForme[mot.toLowerCase()];
+        if (!id || vus[id]) continue;
+        vus[id] = true;
+        frag = frag || document.createDocumentFragment();
+        frag.appendChild(document.createTextNode(txt.slice(dernier, debut)));
+        var b = document.createElement("button");
+        b.type = "button"; b.className = "gl"; b.setAttribute("data-g", id);
+        b.setAttribute("aria-haspopup", "dialog");
+        b.textContent = mot;
+        frag.appendChild(b);
+        dernier = debut + mot.length;
+      }
+      if (frag) {
+        frag.appendChild(document.createTextNode(txt.slice(dernier)));
+        n.parentNode.replaceChild(frag, n);
+      }
+    });
+  }
+
+  function lierCitations(racine) {
+    var refs = racine.querySelectorAll("ol.refs > li");
+    if (!refs.length) return;
+    refs.forEach(function (li) {
+      var m = li.textContent.match(/^\s*\[(\d+)\]/);
+      if (m) li.id = "ref-" + m[1];
+    });
+    var walker = document.createTreeWalker(racine, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        if (!/\[\d+\]/.test(n.nodeValue)) return NodeFilter.FILTER_REJECT;
+        return n.parentElement.closest("a, button, code, pre, .refs, figure") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var noeuds = [];
+    while (walker.nextNode()) noeuds.push(walker.currentNode);
+    noeuds.forEach(function (n) {
+      var parts = n.nodeValue.split(/(\[\d+\])/), frag = document.createDocumentFragment();
+      parts.forEach(function (p) {
+        var m = p.match(/^\[(\d+)\]$/);
+        if (m && racine.querySelector("#ref-" + m[1])) {
+          var a = document.createElement("a");
+          a.href = "#"; a.className = "cite"; a.setAttribute("data-ref", m[1]); a.textContent = p;
+          a.title = "Voir la référence " + m[1];
+          frag.appendChild(a);
+        } else frag.appendChild(document.createTextNode(p));
+      });
+      n.parentNode.replaceChild(frag, n);
+    });
+  }
+
+  function enrichir() {
+    var pageId = state.pageCourante;
+    main.querySelectorAll("article.md").forEach(function (art) {
+      lierCitations(art);
+      if (pageId !== "glossaire") lierTermes(art, pageId);
+    });
+    if (state.ancre) {
+      var cible = document.getElementById("g-" + state.ancre) || document.getElementById(state.ancre);
+      state.ancre = null;
+      if (cible) {
+        cible.classList.add("flash");
+        setTimeout(function () { cible.scrollIntoView({ block: "start" }); }, 30);
+      }
+    }
+  }
+
+  /* Bulle d'explication */
+  var bulle = document.createElement("div");
+  bulle.className = "bulle"; bulle.hidden = true; bulle.setAttribute("role", "dialog");
+  document.body.appendChild(bulle);
+  var bulleSource = null;
+
+  function titrePage(id) {
+    var p = state.pages.find(function (x) { return x.id === id; });
+    if (p) return (p.num ? (/^[A-Z]$/.test(p.num) ? "Annexe " : "Section ") + p.num + " · " : "") + p.titre;
+    var e = state.projets && state.projets.emplacements.find(function (x) { return x.id === id; });
+    return e ? e.repere + " · " + shortTitle(e.titre) : id;
+  }
+
+  function liensTerme(t, avecGlossaire) {
+    var l = [];
+    if (avecGlossaire) l.push('<a href="#glossaire.' + esc(t.id) + '">Glossaire</a>');
+    if (t.page && t.page !== state.pageCourante) l.push('<a href="#' + esc(t.page) + '">' + esc(titrePage(t.page)) + "</a>");
+    if (t.video) l.push('<a href="' + esc(t.video.url) + '" target="_blank" rel="noopener">▶ Vidéo (' + esc(t.video.langue) + ")</a>");
+    if (t.wiki) l.push('<a href="' + esc(t.wiki) + '" target="_blank" rel="noopener">Wikipédia ↗</a>');
+    return l.join("");
+  }
+
+  function ouvrirBulle(btn) {
+    var t = state.glossById[btn.getAttribute("data-g")];
+    if (!t) return;
+    bulle.innerHTML = '<button type="button" class="bulle-x" aria-label="Fermer">×</button>' +
+      '<p class="bulle-t">' + esc(t.terme) + (t.en && t.en !== t.terme ? ' <span>' + esc(t.en) + "</span>" : "") + "</p>" +
+      '<p class="bulle-d">' + esc(t.definition) + "</p>" +
+      '<p class="bulle-l">' + liensTerme(t, true) + "</p>";
+    bulle.hidden = false;
+    bulleSource = btn;
+    btn.setAttribute("aria-expanded", "true");
+    var r = btn.getBoundingClientRect(), mobile = window.innerWidth < 640;
+    if (mobile) { bulle.classList.add("bas"); bulle.style.left = ""; bulle.style.top = ""; }
+    else {
+      bulle.classList.remove("bas");
+      var w = bulle.offsetWidth, x = Math.min(Math.max(12, r.left + window.scrollX), window.scrollX + document.documentElement.clientWidth - w - 12);
+      var y = r.bottom + window.scrollY + 8;
+      if (r.bottom + bulle.offsetHeight + 16 > window.innerHeight) y = r.top + window.scrollY - bulle.offsetHeight - 8;
+      bulle.style.left = x + "px"; bulle.style.top = y + "px";
+    }
+    bulle.querySelector(".bulle-x").focus({ preventScroll: true });
+  }
+  function fermerBulle() {
+    if (bulle.hidden) return;
+    bulle.hidden = true;
+    if (bulleSource) { bulleSource.setAttribute("aria-expanded", "false"); bulleSource = null; }
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("button.gl");
+    if (b) { e.preventDefault(); if (bulleSource === b) fermerBulle(); else ouvrirBulle(b); return; }
+    var c = e.target.closest && e.target.closest("a.cite");
+    if (c) {
+      e.preventDefault();
+      var li = document.getElementById("ref-" + c.getAttribute("data-ref"));
+      if (li) { li.scrollIntoView({ block: "center" }); li.classList.remove("flash"); void li.offsetWidth; li.classList.add("flash"); }
+      return;
+    }
+    if (e.target.closest && e.target.closest(".bulle-x")) { var s = bulleSource; fermerBulle(); if (s) s.focus(); return; }
+    if (!bulle.hidden && !bulle.contains(e.target)) fermerBulle();
+  });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !bulle.hidden) { var s = bulleSource; fermerBulle(); if (s) s.focus(); } });
+  window.addEventListener("resize", fermerBulle);
+
+  /* Page Glossaire */
+  function renderGlossaire(p) {
+    var liste = state.gloss.slice().sort(function (a, b) { return a.terme.localeCompare(b.terme, "fr", { sensitivity: "base" }); });
+    var lettres = {}, html = "";
+    liste.forEach(function (t) {
+      var L = t.terme.normalize("NFD").replace(/[̀-ͯ]/g, "").charAt(0).toUpperCase();
+      if (/[0-9]/.test(L)) L = "#";
+      (lettres[L] = lettres[L] || []).push(t);
+    });
+    var cles = Object.keys(lettres).sort();
+    html += '<p class="eyebrow">Annexe ' + esc(p.num) + '</p><article class="md"><h1>Glossaire</h1>' +
+      "<p>" + liste.length + " termes techniques du portfolio, avec leur équivalent anglais. Dans les pages, chaque terme du glossaire est souligné en pointillés : un clic affiche sa définition. Les liens « Vidéo » mènent à des explications sélectionnées par l'équipe.</p></article>" +
+      '<div class="g-outils"><label for="g-search" class="g-label">Rechercher un terme</label><input id="g-search" type="search" placeholder="ex. MTBF, Weibull, cavitation" autocomplete="off">' +
+      '<nav class="g-lettres" aria-label="Lettres">' + cles.map(function (L) { return '<a href="#glossaire.L-' + (L === "#" ? "0" : L) + '">' + L + "</a>"; }).join("") + "</nav></div>" +
+      '<p class="g-vide" id="g-vide" hidden>Aucun terme ne correspond à cette recherche.</p>';
+    cles.forEach(function (L) {
+      html += '<section class="g-groupe" id="L-' + (L === "#" ? "0" : L) + '"><h2 class="g-lettre">' + L + "</h2>";
+      lettres[L].forEach(function (t) {
+        html += '<div class="g-entry" id="g-' + esc(t.id) + '" data-q="' + esc((t.terme + " " + t.en + " " + (t.formes || []).join(" ")).toLowerCase()) + '">' +
+          '<h3>' + esc(t.terme) + (t.en && t.en !== t.terme ? ' <span class="g-en">' + esc(t.en) + "</span>" : "") + "</h3>" +
+          "<p>" + esc(t.definition) + "</p>" + '<p class="g-liens">' + liensTerme(t, false) + "</p></div>";
+      });
+      html += "</section>";
+    });
+    show(html + pager(p.id));
+    var input = document.getElementById("g-search");
+    input.addEventListener("input", function () {
+      var q = input.value.trim().toLowerCase(), n = 0;
+      document.querySelectorAll(".g-entry").forEach(function (el) { var ok = !q || el.getAttribute("data-q").indexOf(q) >= 0; el.hidden = !ok; if (ok) n++; });
+      document.querySelectorAll(".g-groupe").forEach(function (g) { g.hidden = !g.querySelector(".g-entry:not([hidden])"); });
+      document.getElementById("g-vide").hidden = n > 0;
+    });
+  }
+
   function fail(err) {
     show('<h1 class="page-title">Page indisponible</h1><div class="notice md"><p>Le fichier de contenu n\'a pas pu être chargé (' + esc(err && err.message) + ").</p>" +
       "<p>Si le site est ouvert directement depuis le disque, lancez un serveur local à la racine du dossier : extension <strong>Live Server</strong> dans VS Code, ou <code>python -m http.server</code>, puis ouvrez <code>http://localhost:8000</code>.</p></div>");
   }
 
   function route() {
-    var id = (location.hash || "").replace(/^#/, "") || "accueil";
+    var brut = (location.hash || "").replace(/^#/, "") || "accueil";
+    var point = brut.indexOf(".");
+    var id = point > 0 ? brut.slice(0, point) : brut;
+    state.ancre = point > 0 ? brut.slice(point + 1) : null;
+    state.pageCourante = id;
     setMenu(false);
     markNav(id);
+    if (id === "glossaire") { var pg = state.pages.find(function (x) { return x.id === "glossaire"; }); if (pg) return renderGlossaire(pg); }
     if (id === "projets") return renderProjets();
     var e = state.projets && state.projets.emplacements.find(function (x) { return x.id === id; });
     if (e) return renderProjet(e);
@@ -532,8 +778,10 @@ main { min-width: 0; padding-block: var(--s-7); padding-left: max(var(--s-6), en
     renderSection(state.pages[0]);
   }
 
-  Promise.all([getJSON("contenu/sommaire.json"), getJSON("projets/projets.json")]).then(function (r) {
+  Promise.all([getJSON("contenu/sommaire.json"), getJSON("projets/projets.json"),
+               getJSON("contenu/glossaire.json").catch(function () { return []; })]).then(function (r) {
     state.sommaire = r[0]; state.projets = r[1];
+    preparerGlossaire(r[2]);
     buildNav();
     window.addEventListener("hashchange", function () { route(); main.focus({ preventScroll: true }); });
     route();

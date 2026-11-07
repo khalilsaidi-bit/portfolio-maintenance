@@ -234,15 +234,21 @@ MTTF = η Γ(1 + 1/β) ≈ 4 560 h
 
 Quand les données sont rares, l'approche bayésienne combine une **connaissance a priori**, issue d'une banque de données ou de l'avis d'experts, avec les observations du site. On obtient une **loi a posteriori** des paramètres, mise à jour à chaque nouvelle défaillance. Elle est présentée au chapitre 8 du cours.
 
+## Vidéos et ressources
+
+Sélection de l'équipe pour approfondir cette partie. Les vidéos appartiennent à leurs auteurs et s'ouvrent sur YouTube.
+
+<ul class="res"><li><span><a href="https://www.youtube.com/watch?v=UhnvPx3_ImQ" target="_blank" rel="noopener">Introduction to Weibull Analysis for Reliability Engineering</a> <span class="src">· vidéo, anglais</span></span></li><li><span><a href="https://www.youtube.com/watch?v=YoQQX1OK08o" target="_blank" rel="noopener">Weibull Distribution – Worked Example</a> <span class="src">· vidéo, anglais</span></span></li><li><span><a href="https://www.youtube.com/watch?v=bMjMrXhPjHk" target="_blank" rel="noopener">Qu'est-ce que l'AMDEC ? (La minute métier #4)</a> <span class="src">· vidéo, français</span></span></li><li><span><a href="https://www.youtube.com/watch?v=kI-wUOWVizc" target="_blank" rel="noopener">AMDEC : Analyse des Modes de Défaillance, Effets et Criticité</a> <span class="src">· vidéo, français</span></span></li><li><span><a href="https://www.youtube.com/watch?v=xJJoEV2YGuw" target="_blank" rel="noopener">Fault Tree Analysis (FTA) Explained with Example</a> <span class="src">· vidéo, anglais</span></span></li><li><span><a href="https://www.youtube.com/watch?v=kNu6kpnlMEw" target="_blank" rel="noopener">Minimal Cut-Sets (Explained)</a> <span class="src">· vidéo, anglais</span></span></li><li class="doc"><span><a href="https://fr.wikipedia.org/wiki/Application_des_cha%C3%AEnes_de_Markov_%C3%A0_la_s%C3%BBret%C3%A9_de_fonctionnement" target="_blank" rel="noopener">Application des chaînes de Markov à la sûreté de fonctionnement</a> <span class="src">· Wikipédia</span></span></li><li class="doc"><span><a href="https://fr.wikipedia.org/wiki/Estimateur_de_Kaplan-Meier" target="_blank" rel="noopener">Estimateur de Kaplan-Meier</a> <span class="src">· Wikipédia</span></span></li></ul>
+
 ## Références
 
 <ol class="refs">
-<li>[1] A. Villemeur, <i>Sûreté de fonctionnement des systèmes industriels : fiabilité, facteurs humains, informatisation</i>. Paris : Eyrolles, 1988.</li>
-<li>[2] IEC, <i>IEC 60812:2018 — Failure modes and effects analysis (FMEA and FMECA)</i>, 3ᵉ éd., Genève : IEC, 2018.</li>
-<li>[3] G. Landy, <i>AMDEC : guide pratique</i>, 2ᵉ éd. La Plaine Saint-Denis : AFNOR, 2007.</li>
-<li>[4] M. Rausand et A. Høyland, <i>System Reliability Theory: Models, Statistical Methods, and Applications</i>, 2ᵉ éd. Hoboken, NJ : Wiley, 2004.</li>
-<li>[5] IEC, <i>IEC 61025:2006 — Fault tree analysis (FTA)</i> ; <i>IEC 61078:2016 — Reliability block diagrams</i> ; <i>IEC 61165:2006 — Application of Markov techniques</i>. Genève : IEC.</li>
-<li>[6] F. Ben Hmida, <i>Sûreté de fonctionnement</i>, support de cours (chap. 0 à 8) et TD 1 à 3.</li>
-<li>[7] F. Ben Hmida, <i>Estimation des indices FMDS</i>, support de formation, oct. 2025.</li>
-<li>[8] E. L. Kaplan et P. Meier, « Nonparametric estimation from incomplete observations », <i>J. Amer. Statist. Assoc.</i>, vol. 53, n° 282, p. 457-481, 1958.</li>
+<li>[1] A. Villemeur, <i>Sûreté de fonctionnement des systèmes industriels : fiabilité, facteurs humains, informatisation</i>. Paris : Eyrolles, 1988. <a class="reflink" href="https://scholar.google.com/scholar?q=Villemeur%20S%C3%BBret%C3%A9%20de%20fonctionnement%20des%20syst%C3%A8mes%20industriels" target="_blank" rel="noopener">Google Scholar ↗</a></li>
+<li>[2] IEC, <i>IEC 60812:2018 — Failure modes and effects analysis (FMEA and FMECA)</i>, 3ᵉ éd., Genève : IEC, 2018. <a class="reflink" href="https://webstore.iec.ch/en/publication/26359" target="_blank" rel="noopener">IEC ↗</a></li>
+<li>[3] G. Landy, <i>AMDEC : guide pratique</i>, 2ᵉ éd. La Plaine Saint-Denis : AFNOR, 2007. <a class="reflink" href="https://scholar.google.com/scholar?q=Landy%20AMDEC%20guide%20pratique%20AFNOR" target="_blank" rel="noopener">Google Scholar ↗</a></li>
+<li>[4] M. Rausand et A. Høyland, <i>System Reliability Theory: Models, Statistical Methods, and Applications</i>, 2ᵉ éd. Hoboken, NJ : Wiley, 2004. <a class="reflink" href="https://scholar.google.com/scholar?q=Rausand%20H%C3%B8yland%20System%20Reliability%20Theory" target="_blank" rel="noopener">Google Scholar ↗</a></li>
+<li>[5] IEC, <i>IEC 61025:2006 — Fault tree analysis (FTA)</i> ; <i>IEC 61078:2016 — Reliability block diagrams</i> ; <i>IEC 61165:2006 — Application of Markov techniques</i>. Genève : IEC. <a class="reflink" href="https://www.google.com/search?q=IEC%2061025%20fault%20tree%20analysis%20IEC%2061078%20IEC%2061165" target="_blank" rel="noopener">Rechercher ↗</a></li>
+<li>[6] F. Ben Hmida, <i>Sûreté de fonctionnement</i>, support de cours (chap. 0 à 8) et TD 1 à 3. <span class="refnote">(document de cours, non publié en ligne)</span></li>
+<li>[7] F. Ben Hmida, <i>Estimation des indices FMDS</i>, support de formation, oct. 2025. <span class="refnote">(document de cours, non publié en ligne)</span></li>
+<li>[8] E. L. Kaplan et P. Meier, « Nonparametric estimation from incomplete observations », <i>J. Amer. Statist. Assoc.</i>, vol. 53, n° 282, p. 457-481, 1958. <a class="reflink" href="https://doi.org/10.1080/01621459.1958.10501452" target="_blank" rel="noopener">DOI ↗</a></li>
 </ol>

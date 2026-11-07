@@ -150,14 +150,20 @@ L'**ISO 55000** dépasse la maintenance : elle traite de la gestion des actifs p
 
 En Tunisie, l'organisme national de normalisation est l'INNORPI. Avant de citer une norme dans un document contractuel, il faut vérifier l'existence d'une version homologuée nationale.
 
+## Vidéos et ressources
+
+Sélection de l'équipe pour approfondir cette partie. Les vidéos appartiennent à leurs auteurs et s'ouvrent sur YouTube.
+
+<ul class="res"><li><span><a href="https://www.youtube.com/watch?v=1L82cY8ocno" target="_blank" rel="noopener">Différentes formes de la maintenance</a> <span class="src">· vidéo, français</span></span></li><li><span><a href="https://www.youtube.com/watch?v=euooAc4rofc" target="_blank" rel="noopener">La maintenance préventive</a> <span class="src">· vidéo, français</span></span></li><li><span><a href="https://www.youtube.com/watch?v=2hrlA3nhr0k" target="_blank" rel="noopener">Management de la maintenance industrielle, partie 2</a> <span class="src">· vidéo, français</span></span></li><li><span><a href="https://www.youtube.com/watch?v=XemQTXaOLU8" target="_blank" rel="noopener">Gestion économique de la maintenance</a> <span class="src">· vidéo, français</span></span></li><li class="doc"><span><a href="https://fr.wikipedia.org/wiki/Maintenance" target="_blank" rel="noopener">Maintenance</a> <span class="src">· Wikipédia</span></span></li><li class="doc"><span><a href="https://www.iso.org/standard/83053.html" target="_blank" rel="noopener">ISO 55000:2024, gestion d'actifs</a> <span class="src">· ISO</span></span></li></ul>
+
 ## Références
 
 <ol class="refs">
-<li>[1] AFNOR, <i>NF EN 13306 — Maintenance — Terminologie de la maintenance</i>, version française de l'EN 13306:2017, La Plaine Saint-Denis : AFNOR.</li>
-<li>[2] J. Moubray, <i>Reliability-Centred Maintenance</i>, 2ᵉ éd. Oxford : Butterworth-Heinemann, 1997.</li>
-<li>[3] F. Ben Hmida, <i>Maintenance industrielle — Chap. 1 : Concepts de base sur la maintenance</i>, support de cours, 2024.</li>
-<li>[4] F. S. Nowlan et H. F. Heap, « Reliability-Centered Maintenance », U.S. Department of Defense, rapport AD-A066579, 1978.</li>
-<li>[5] AFNOR, <i>NF X60-000 — Maintenance industrielle — Fonction maintenance</i>, avril 2016.</li>
-<li>[6] AFNOR, <i>NF EN 15341 — Maintenance — Indicateurs de performance clés pour la maintenance</i>, 2019, amendement A1, 2022.</li>
-<li>[7] ISO, <i>ISO 55000:2024 — Asset management — Vocabulary, overview and principles</i>, 2ᵉ éd., Genève : ISO, 2024. [En ligne]. Disponible : https://www.iso.org/standard/83053.html</li>
+<li>[1] AFNOR, <i>NF EN 13306 — Maintenance — Terminologie de la maintenance</i>, version française de l'EN 13306:2017, La Plaine Saint-Denis : AFNOR. <a class="reflink" href="https://www.boutique.afnor.org/en-gb/standard/nf-en-13306/maintenance-maintenance-terminology/fa185755/1713" target="_blank" rel="noopener">AFNOR ↗</a></li>
+<li>[2] J. Moubray, <i>Reliability-Centred Maintenance</i>, 2ᵉ éd. Oxford : Butterworth-Heinemann, 1997. <a class="reflink" href="https://scholar.google.com/scholar?q=Moubray%20Reliability-Centred%20Maintenance" target="_blank" rel="noopener">Google Scholar ↗</a></li>
+<li>[3] F. Ben Hmida, <i>Maintenance industrielle — Chap. 1 : Concepts de base sur la maintenance</i>, support de cours, 2024. <span class="refnote">(document de cours, non publié en ligne)</span></li>
+<li>[4] F. S. Nowlan et H. F. Heap, « Reliability-Centered Maintenance », U.S. Department of Defense, rapport AD-A066579, 1978. <a class="reflink" href="https://scholar.google.com/scholar?q=Nowlan%20Heap%20Reliability-Centered%20Maintenance%201978" target="_blank" rel="noopener">Google Scholar ↗</a></li>
+<li>[5] AFNOR, <i>NF X60-000 — Maintenance industrielle — Fonction maintenance</i>, avril 2016. <a class="reflink" href="https://www.boutique.afnor.org/en-gb/standard/fd-x60000/industrial-maintenance-maintenance-function/fa120430/19959" target="_blank" rel="noopener">AFNOR ↗</a></li>
+<li>[6] AFNOR, <i>NF EN 15341 — Maintenance — Indicateurs de performance clés pour la maintenance</i>, 2019, amendement A1, 2022. <a class="reflink" href="https://www.google.com/search?q=NF%20EN%2015341%20indicateurs%20de%20performance%20cl%C3%A9s%20maintenance" target="_blank" rel="noopener">Rechercher ↗</a></li>
+<li>[7] ISO, <i>ISO 55000:2024 — Asset management — Vocabulary, overview and principles</i>, 2ᵉ éd., Genève : ISO, 2024. <a class="reflink" href="https://www.iso.org/standard/83053.html" target="_blank" rel="noopener">ISO ↗</a></li>
 </ol>

@@ -222,13 +222,19 @@ python run_all.py                  # ≈ 1 min : tableaux, figures, resume_chiff
 
 L'archive contient le code complet (Python), les tableaux de résultats, les figures, le README et un Dockerfile. Les données SKAB ne sont pas incluses : la première commande ci-dessus les télécharge. Tous les chiffres de cette page figurent dans `resultats/resume_chiffres.md`, généré par le code.
 
+## Vidéos et ressources
+
+Sélection de l'équipe pour approfondir cette partie. Les vidéos appartiennent à leurs auteurs et s'ouvrent sur YouTube.
+
+<ul class="res"><li><span><a href="https://www.youtube.com/watch?v=RmktDvMrhGw" target="_blank" rel="noopener">Hotelling's T-square explained with a simple example</a> <span class="src">· vidéo, anglais</span></span></li><li><span><a href="https://www.youtube.com/watch?v=Y1x51i1936M" target="_blank" rel="noopener">Isolation Forests: Identify Outliers in Data</a> <span class="src">· vidéo, anglais</span></span></li><li><span><a href="https://www.youtube.com/watch?v=0lb2kCBg_W8" target="_blank" rel="noopener">Isolation Forest Explained with iTrees & Step-by-Step Calculations</a> <span class="src">· vidéo, anglais</span></span></li><li><span><a href="https://www.youtube.com/watch?v=ZzkwJnmJ_eM" target="_blank" rel="noopener">What Is Motor Current Signature Analysis (MCSA)?</a> <span class="src">· vidéo, anglais</span></span></li><li class="doc"><span><a href="https://github.com/waico/SKAB" target="_blank" rel="noopener">Dépôt du jeu de données SKAB</a> <span class="src">· GitHub</span></span></li><li class="doc"><span><a href="https://fr.wikipedia.org/wiki/Distance_de_Mahalanobis" target="_blank" rel="noopener">Distance de Mahalanobis</a> <span class="src">· Wikipédia</span></span></li></ul>
+
 ## Références
 
 <ol class="refs">
-<li>[1] I. D. Katser et V. O. Kozitsin, « Skoltech Anomaly Benchmark (SKAB) », Kaggle, 2020, doi : 10.34740/KAGGLE/DSV/1693952. [En ligne]. Disponible : https://github.com/waico/SKAB</li>
-<li>[2] H. Hotelling, « Multivariate quality control illustrated by the air testing of sample bombsights », dans <i>Techniques of Statistical Analysis</i>, C. Eisenhart, M. W. Hastay et W. A. Wallis, éd. New York : McGraw-Hill, 1947, p. 111-184.</li>
-<li>[3] O. Ledoit et M. Wolf, « A well-conditioned estimator for large-dimensional covariance matrices », <i>J. Multivariate Anal.</i>, vol. 88, n° 2, p. 365-411, 2004.</li>
-<li>[4] F. T. Liu, K. M. Ting et Z.-H. Zhou, « Isolation Forest », dans <i>Proc. 8th IEEE Int. Conf. Data Mining (ICDM)</i>, Pise, 2008, p. 413-422.</li>
-<li>[5] F. Pedregosa <i>et al.</i>, « Scikit-learn: Machine learning in Python », <i>J. Mach. Learn. Res.</i>, vol. 12, p. 2825-2830, 2011.</li>
-<li>[6] IEC, <i>IEC 60812:2018 — Failure modes and effects analysis (FMEA and FMECA)</i>. Genève : IEC, 2018.</li>
+<li>[1] I. D. Katser et V. O. Kozitsin, « Skoltech Anomaly Benchmark (SKAB) », Kaggle, 2020, doi : 10.34740/KAGGLE/DSV/1693952. <a class="reflink" href="https://doi.org/10.34740/KAGGLE/DSV/1693952" target="_blank" rel="noopener">DOI ↗</a></li>
+<li>[2] H. Hotelling, « Multivariate quality control illustrated by the air testing of sample bombsights », dans <i>Techniques of Statistical Analysis</i>, C. Eisenhart, M. W. Hastay et W. A. Wallis, éd. New York : McGraw-Hill, 1947, p. 111-184. <a class="reflink" href="https://scholar.google.com/scholar?q=Hotelling%20Multivariate%20quality%20control%20illustrated%20by%20the%20air%20testing%20of%20sample%20bombsights" target="_blank" rel="noopener">Google Scholar ↗</a></li>
+<li>[3] O. Ledoit et M. Wolf, « A well-conditioned estimator for large-dimensional covariance matrices », <i>J. Multivariate Anal.</i>, vol. 88, n° 2, p. 365-411, 2004. <a class="reflink" href="https://doi.org/10.1016/S0047-259X(03)00096-4" target="_blank" rel="noopener">DOI ↗</a></li>
+<li>[4] F. T. Liu, K. M. Ting et Z.-H. Zhou, « Isolation Forest », dans <i>Proc. 8th IEEE Int. Conf. Data Mining (ICDM)</i>, Pise, 2008, p. 413-422. <a class="reflink" href="https://doi.org/10.1109/ICDM.2008.17" target="_blank" rel="noopener">DOI ↗</a></li>
+<li>[5] F. Pedregosa <i>et al.</i>, « Scikit-learn: Machine learning in Python », <i>J. Mach. Learn. Res.</i>, vol. 12, p. 2825-2830, 2011. <a class="reflink" href="https://jmlr.org/papers/v12/pedregosa11a.html" target="_blank" rel="noopener">JMLR ↗</a></li>
+<li>[6] IEC, <i>IEC 60812:2018 — Failure modes and effects analysis (FMEA and FMECA)</i>, 3ᵉ éd., Genève : IEC, 2018. <a class="reflink" href="https://webstore.iec.ch/en/publication/26359" target="_blank" rel="noopener">IEC ↗</a></li>
 </ol>

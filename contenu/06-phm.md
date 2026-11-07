@@ -100,16 +100,22 @@ Les jeux C-MAPSS sont simulés : ils sont excellents pour comparer des algorithm
 - **Transfert** d'un équipement, d'un site ou d'une condition à l'autre.
 - **Explicabilité** : les équipes de maintenance doivent comprendre pourquoi un modèle alerte [8].
 
+## Vidéos et ressources
+
+Sélection de l'équipe pour approfondir cette partie. Les vidéos appartiennent à leurs auteurs et s'ouvrent sur YouTube.
+
+<ul class="res"><li><span><a href="https://www.youtube.com/watch?v=QW7Xw1vSvFs" target="_blank" rel="noopener">A Brief Overview of Prognostics and Health Management</a> <span class="src">· vidéo, anglais</span></span></li><li><span><a href="https://www.youtube.com/watch?v=h0spNJ_805Q" target="_blank" rel="noopener">Prognostics and Health Management: A Systems Approach</a> <span class="src">· vidéo, anglais</span></span></li><li><span><a href="https://www.youtube.com/watch?v=hRpfsRBszz4" target="_blank" rel="noopener">Remaining Useful Life (RUL) Estimation Methodologies</a> <span class="src">· vidéo, anglais</span></span></li><li><span><a href="https://www.youtube.com/watch?v=Dd_4rbWYgI4" target="_blank" rel="noopener">Estimating Remaining Useful Life (RUL) for Prognostics</a> <span class="src">· vidéo, anglais</span></span></li><li class="doc"><span><a href="https://fr.wikipedia.org/wiki/Pronostic_de_d%C3%A9faillance" target="_blank" rel="noopener">Pronostic de défaillance</a> <span class="src">· Wikipédia</span></span></li></ul>
+
 ## Références
 
 <ol class="refs">
-<li>[1] ISO, <i>ISO 13374 — Condition monitoring and diagnostics of machines — Data processing, communication and presentation</i>, parties 1 à 4. Genève : ISO.</li>
-<li>[2] F. Ben Hmida, <i>Maintenance industrielle — Chap. 4 : Maintenance prédictive (partie PHM)</i>, support de cours, 2024.</li>
-<li>[3] Y. Lei, N. Li, L. Guo, N. Li, T. Yan et J. Lin, « Machinery health prognostics: A systematic review from data acquisition to RUL prediction », <i>Mech. Syst. Signal Process.</i>, vol. 104, p. 799-834, 2018.</li>
-<li>[4] A. Saxena, K. Goebel, D. Simon et N. Eklund, « Damage propagation modeling for aircraft engine run-to-failure simulation », dans <i>Proc. Int. Conf. Prognostics and Health Management (PHM08)</i>, Denver, CO, 2008.</li>
-<li>[5] A. Saxena, J. Celaya, B. Saha, S. Saha et K. Goebel, « Metrics for offline evaluation of prognostic performance », <i>Int. J. Prognostics Health Manag.</i>, vol. 1, n° 1, 2010.</li>
-<li>[6] P. Nectoux <i>et al.</i>, « PRONOSTIA: An experimental platform for bearings accelerated degradation tests », dans <i>Proc. IEEE Int. Conf. Prognostics and Health Management</i>, Denver, CO, 2012.</li>
-<li>[7] C. Lessmeier, J. K. Kimotho, D. Zimmer et W. Sextro, « Condition monitoring of bearing damage in electromechanical drive systems by using motor current signals of electric motors: A benchmark data set for data-driven classification », dans <i>Proc. European Conf. PHM Society</i>, Bilbao, 2016.</li>
-<li>[8] A. K. S. Jardine, D. Lin et D. Banjevic, « A review on machinery diagnostics and prognostics implementing condition-based maintenance », <i>Mech. Syst. Signal Process.</i>, vol. 20, n° 7, p. 1483-1510, 2006.</li>
-<li>[9] ISO, <i>ISO 13381-1:2015 — Condition monitoring and diagnostics of machines — Prognostics — Part 1: General guidelines</i>. Genève : ISO, 2015.</li>
+<li>[1] ISO, <i>ISO 13374 — Condition monitoring and diagnostics of machines — Data processing, communication and presentation</i>, parties 1 à 4. Genève : ISO. <a class="reflink" href="https://www.iso.org/search.html?q=ISO%2013374" target="_blank" rel="noopener">ISO ↗</a></li>
+<li>[2] F. Ben Hmida, <i>Maintenance industrielle — Chap. 4 : Maintenance prédictive (partie PHM)</i>, support de cours, 2024. <span class="refnote">(document de cours, non publié en ligne)</span></li>
+<li>[3] Y. Lei, N. Li, L. Guo, N. Li, T. Yan et J. Lin, « Machinery health prognostics: A systematic review from data acquisition to RUL prediction », <i>Mech. Syst. Signal Process.</i>, vol. 104, p. 799-834, 2018. <a class="reflink" href="https://doi.org/10.1016/j.ymssp.2017.11.016" target="_blank" rel="noopener">DOI ↗</a></li>
+<li>[4] A. Saxena, K. Goebel, D. Simon et N. Eklund, « Damage propagation modeling for aircraft engine run-to-failure simulation », dans <i>Proc. Int. Conf. Prognostics and Health Management (PHM08)</i>, Denver, CO, 2008. <a class="reflink" href="https://doi.org/10.1109/PHM.2008.4711414" target="_blank" rel="noopener">DOI ↗</a></li>
+<li>[5] A. Saxena, J. Celaya, B. Saha, S. Saha et K. Goebel, « Metrics for offline evaluation of prognostic performance », <i>Int. J. Prognostics Health Manag.</i>, vol. 1, n° 1, 2010. <a class="reflink" href="https://doi.org/10.36001/ijphm.2010.v1i1.1336" target="_blank" rel="noopener">DOI ↗</a></li>
+<li>[6] P. Nectoux <i>et al.</i>, « PRONOSTIA: An experimental platform for bearings accelerated degradation tests », dans <i>Proc. IEEE Int. Conf. Prognostics and Health Management</i>, Denver, CO, 2012. <a class="reflink" href="https://scholar.google.com/scholar?q=PRONOSTIA%20An%20experimental%20platform%20for%20bearings%20accelerated%20degradation%20tests" target="_blank" rel="noopener">Google Scholar ↗</a></li>
+<li>[7] C. Lessmeier, J. K. Kimotho, D. Zimmer et W. Sextro, « Condition monitoring of bearing damage in electromechanical drive systems by using motor current signals of electric motors: A benchmark data set for data-driven classification », dans <i>Proc. European Conf. PHM Society</i>, Bilbao, 2016. <a class="reflink" href="https://papers.phmsociety.org/index.php/phme/article/view/1577" target="_blank" rel="noopener">PHM Society ↗</a></li>
+<li>[8] A. K. S. Jardine, D. Lin et D. Banjevic, « A review on machinery diagnostics and prognostics implementing condition-based maintenance », <i>Mech. Syst. Signal Process.</i>, vol. 20, n° 7, p. 1483-1510, 2006. <a class="reflink" href="https://doi.org/10.1016/j.ymssp.2005.09.012" target="_blank" rel="noopener">DOI ↗</a></li>
+<li>[9] ISO, <i>ISO 13381-1:2015 — Condition monitoring and diagnostics of machines — Prognostics — Part 1: General guidelines</i>. Genève : ISO, 2015. <a class="reflink" href="https://www.iso.org/search.html?q=ISO%2013381-1" target="_blank" rel="noopener">ISO ↗</a></li>
 </ol>
