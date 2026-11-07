@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Surveillance multicapteur d&#x27;une électropompe — PRJ-01</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono&family=Barlow+Condensed:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6f7;--card:#fff;--ink:#1b2730;--mut:#5c6b76;--line:#d9e0e4;--acc:#1f7a5c;--accbg:#e3f1eb}
+@media (prefers-color-scheme:dark){:root{--bg:#12181d;--card:#1a2228;--ink:#e3e8eb;--mut:#9aa8b2;--line:#2c3840;--acc:#5cc39a;--accbg:#1d3a30}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "IBM Plex Sans",system-ui,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:40px 16px 64px}
+.top{font:12px/1.4 "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}
+h1{font:600 clamp(2rem,5vw,2.8rem)/1.05 "Barlow Condensed",sans-serif;margin:.35em 0 .2em}
+.sub{color:var(--mut);font-size:1.1rem;margin:0 0 1.2rem}
+.pill{display:inline-block;font:12px "IBM Plex Mono",monospace;background:var(--accbg);color:var(--acc);padding:2px 10px;border-radius:99px;margin-left:8px}
+dl.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 24px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin:0 0 1.2rem}
+dl.meta dt{font:11px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
+dl.meta dd{margin:2px 0 0}
+.resume{border-left:3px solid var(--acc);padding:4px 0 4px 14px;margin:0 0 2rem}
+article h2{font:600 1.7rem/1.2 "Barlow Condensed",sans-serif;margin:2.2rem 0 .6rem;padding-top:.6rem;border-top:1px solid var(--line)}
+article h3{font-size:1.08rem;margin:1.6rem 0 .4rem}
+a{color:var(--acc)}
+blockquote{margin:0 0 1rem;padding:8px 14px;background:var(--card);border:1px solid var(--line);border-radius:6px;color:var(--mut);font-size:.92rem}
+blockquote p{margin:0}
+table{border-collapse:collapse;width:100%;font-size:.9rem;margin:1rem 0;display:block;overflow-x:auto}
+th,td{border-bottom:1px solid var(--line);padding:6px 10px;text-align:left;vertical-align:top}
+th{font-weight:600;background:var(--card)}
+figure{margin:1.4rem 0;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px}
+figure img{display:block;width:100%;height:auto;border-radius:4px;background:#fff}
+figcaption{font-size:.86rem;color:var(--mut);margin-top:8px}
+pre{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:12px;overflow-x:auto;font:13px/1.5 "IBM Plex Mono",monospace}
+code{font-family:"IBM Plex Mono",monospace;font-size:.9em}
+.btn{display:inline-block;background:var(--acc);color:#fff;text-decoration:none;padding:9px 16px;border-radius:6px;font-weight:600;margin:.4rem 0}
+ul.res,ol.refs{list-style:none;padding:0}
+ul.res li,ol.refs li{padding:6px 0;border-bottom:1px solid var(--line)}
+.src{color:var(--mut);font-size:.88rem}
+.reflink{font-size:.85rem;white-space:nowrap}
+footer{margin-top:3rem;color:var(--mut);font-size:.85rem;border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p class="top">École Polytechnique de Sousse · SDF · Mini-projet PRJ-01<span class="pill">Terminé</span></p>
+<h1>Surveillance multicapteur d&#x27;une électropompe</h1>
+<p class="sub">Quel capteur détecte quel mode de défaillance, avec combien de fausses alarmes ?</p>
+<dl class="meta"><div><dt>Équipe</dt><dd>Khalil Saidi, Wassim Bergaoui</dd></div><div><dt>Équipement</dt><dd>Électropompe de banc d&#x27;essai (circuit d&#x27;eau, variateur, vannes)</dd></div><div><dt>Tâche</dt><dd>Détection d&#x27;anomalies et mesure de la détectabilité (indice D de l&#x27;AMDEC)</dd></div><div><dt>Données</dt><dd>SKAB, Skoltech, 34 expériences réelles, licence GPL-3.0</dd></div><div><dt>Outils</dt><dd>Python, pandas, scikit-learn, Matplotlib</dd></div></dl>
+<article>
+<blockquote>
+<p><strong>État :</strong> terminé · tous les résultats ci-dessous viennent de l'exécution du code du projet sur les données réelles (novembre 2026)</p>
+</blockquote>
+<h2>Résumé</h2>
+<p>On surveille une électropompe de banc d'essai avec huit capteurs : deux accéléromètres, le courant et la tension du moteur, la pression, le débit, et deux températures. On cherche <strong>quel groupe de capteurs détecte quel mode de défaillance</strong>, avec quel délai et avec combien de fausses alarmes, puis on traduit ces mesures en <strong>indice de détection D de l'AMDEC</strong>. Le banc a subi 34 expériences de défaut, réparties en 7 modes.</p>
+<p><strong>Résultats principaux</strong></p>
+<ul>
+<li>Les <strong>capteurs hydrauliques</strong> (débit, pression) sont le meilleur groupe seul. La première alarme tombe pendant le défaut dans <strong>79 %</strong> des expériences, avec <strong>3,1 fausses alarmes par heure</strong>.</li>
+<li>Les <strong>mesures électriques</strong> (courant et tension efficaces, échantillonnés à 1 Hz) ne détectent presque rien : <strong>15 %</strong> de détection stricte. Sur ce banc et avec ce type de mesure, le courant ne remplace pas les autres capteurs.</li>
+<li>La <strong>vibration</strong> est indispensable pour le <strong>balourd</strong> : effet environ 110 fois l'écart-type normal, alarme en 9 à 10 s. Elle est en revanche aveugle aux obstructions.</li>
+<li>La combinaison <strong>vibration + hydraulique</strong> (4 capteurs) donne le meilleur compromis : <strong>82 %</strong> de détection stricte, 7,5 fausses alarmes par heure, et un indice D ≤ 2 pour 6 des 7 modes.</li>
+<li>Un modèle appris sur un autre jour, donc à un autre point de fonctionnement, ne fonctionne pas. <strong>La référence doit être réapprise à chaque changement de régime.</strong></li>
+<li>Le score F1 point par point, utilisé par le benchmark SKAB, récompense des détecteurs qui déclenchent beaucoup de fausses alarmes. Pour la maintenance, il faut l'évaluer <strong>par événement</strong>.</li>
+</ul>
+<h2>1. Problématique</h2>
+<p>Sur une installation de pompage, une défaillance peut être <strong>mécanique</strong> (balourd), <strong>hydraulique</strong> (obstruction, fuite, cavitation) ou liée au <strong>process</strong> (niveau, température du fluide). Chaque capteur coûte : achat, pose, câblage, maintenance. La question industrielle est donc :</p>
+<p><strong>Quels capteurs installer, et avec quelle règle d'alarme, pour détecter tôt chaque mode de défaillance sans noyer l'équipe sous les fausses alarmes ?</strong></p>
+<h2>2. Choix du jeu de données</h2>
+<p>La fiche initiale prévoyait le jeu de l'Université de Twente (signaux de courant et de vibration à haute fréquence, 20,8 Go). Il n'a pas pu être téléchargé dans l'environnement de calcul du projet, et son volume rendait la reproduction difficile pour l'équipe. Nous avons retenu le <strong>Skoltech Anomaly Benchmark (SKAB)</strong> [1] pour les raisons suivantes :</p>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th>SKAB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Système</td>
+<td>Banc réel de circulation d'eau : réservoir, électropompe pilotée par variateur, vannes à commande électrique, capteurs</td>
+</tr>
+<tr>
+<td>Capteurs</td>
+<td>Les deux familles de la question initiale (vibration et courant moteur), plus la pression, le débit et les températures</td>
+</tr>
+<tr>
+<td>Défauts</td>
+<td>34 expériences étiquetées, 7 modes de défaillance (tableau ci-dessous)</td>
+</tr>
+<tr>
+<td>Accès</td>
+<td>Public, sur GitHub ; licence GPL-3.0 ; 18 Mo</td>
+</tr>
+<tr>
+<td>Antériorité</td>
+<td>Benchmark connu, avec un classement d'algorithmes : nos résultats peuvent être comparés</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conséquence sur la question.</strong> Les signaux de SKAB sont des valeurs <strong>efficaces échantillonnées à 1 Hz</strong>. L'analyse spectrale du courant (MCSA) est donc impossible. La question devient : <em>quelle information apporte chaque famille de capteurs, telle qu'elle est mesurée sur une supervision industrielle courante ?</em></p>
+<p><strong>Différence avec le projet antérieur</strong> (données NASA, estimation de la RUL) : système différent (pompe), données réelles et non simulées, tâche différente (détection, et non durée de vie résiduelle). L'apport propre est la comparaison des groupes de capteurs, le lien chiffré avec l'AMDEC et l'évaluation orientée maintenance.</p>
+<figure class="fig fig-img"><a href="../projets/projet-1/fig/fig_banc_skab.jpg" target="_blank" rel="noopener"><img src="../projets/projet-1/fig/fig_banc_skab.jpg" alt="Photo du banc d'essai SKAB : réservoir, électropompe, tuyauteries, vannes et armoires d'acquisition"></a><figcaption>Banc d'essai SKAB (Skoltech). Image du dépôt SKAB, licence GPL-3.0 [1].</figcaption></figure>
+
+<h2>3. Données</h2>
+<table>
+<thead>
+<tr>
+<th>Mode de défaillance (fichiers SKAB)</th>
+<th>Nombre d'expériences</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Obstruction à l'aspiration (valve1)</td>
+<td>16</td>
+<td>Fermeture de la vanne à l'entrée de la pompe</td>
+</tr>
+<tr>
+<td>Obstruction au refoulement (valve2)</td>
+<td>4</td>
+<td>Fermeture de la vanne en sortie de pompe</td>
+</tr>
+<tr>
+<td>Fuite / ajout de fluide (other 1-4)</td>
+<td>4</td>
+<td>Simulation de fuites et d'ajouts de fluide</td>
+</tr>
+<tr>
+<td>Balourd du rotor (other 5-9)</td>
+<td>5</td>
+<td>Balourd appliqué selon 5 profils : brusque, linéaire, en échelon, impulsion, exponentiel</td>
+</tr>
+<tr>
+<td>Hausse du niveau d'eau (other 10-11)</td>
+<td>2</td>
+<td>Augmentation lente ou brusque de l'eau dans le circuit</td>
+</tr>
+<tr>
+<td>Cavitation (other 12-13)</td>
+<td>2</td>
+<td>Vidange jusqu'à cavitation ; écoulement diphasique à l'aspiration</td>
+</tr>
+<tr>
+<td>Fluide trop chaud (other 14)</td>
+<td>1</td>
+<td>Alimentation en eau à température élevée</td>
+</tr>
+</tbody>
+</table>
+<p>Un fichier supplémentaire de 9 405 s (2 h 37) enregistre un fonctionnement <strong>sans anomalie</strong>, un autre jour.</p>
+<h3>Contrôle qualité</h3>
+<ul>
+<li>Aucune valeur manquante. Chaque expérience contient un seul défaut étiqueté.</li>
+<li>Six fichiers présentent des trous d'enregistrement de plus de 5 s ; le plus long dure 247 s (other/2). Ils sont conservés et signalés comme limite.</li>
+<li>Dans <strong>other/2</strong>, le défaut commence à 104 s. Le protocole standard de SKAB, qui apprend sur les 400 premières secondes, y apprend donc <strong>sur des données défaillantes</strong>. Notre protocole arrête la référence 10 s avant le défaut (94 s ici).</li>
+<li><strong>Le point de fonctionnement change d'un jour à l'autre</strong> (médianes sur les références) :</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Jour d'enregistrement</th>
+<th>Débit (L/min)</th>
+<th>Vibration 1 (g)</th>
+<th>Courant (A)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8 février 2020 (fichier sain, balourd, niveau, cavitation, fluide chaud)</td>
+<td>≈ 127</td>
+<td>≈ 0,23</td>
+<td>≈ 2,6</td>
+</tr>
+<tr>
+<td>1ᵉʳ mars 2020 (fuites)</td>
+<td>≈ 77</td>
+<td>≈ 0,08</td>
+<td>≈ 1,6</td>
+</tr>
+<tr>
+<td>9 mars 2020 (obstructions)</td>
+<td>≈ 32</td>
+<td>≈ 0,03</td>
+<td>≈ 1,0</td>
+</tr>
+</tbody>
+</table>
+<figure class="fig fig-img"><a href="../projets/projet-1/fig/fig_signaux.png" target="_blank" rel="noopener"><img src="../projets/projet-1/fig/fig_signaux.png" alt="Vibration, débit et courant pour un balourd, une cavitation et une obstruction"></a><figcaption>Signaux bruts de trois expériences. Le balourd est évident sur la vibration, la cavitation sur le débit. L'obstruction à l'aspiration est subtile (débit qui passe de 32 à 31 L/min). Le courant ne montre rien de visible.</figcaption></figure>
+
+<h2>4. Méthode</h2>
+<ol>
+<li><strong>Référence locale (état sain).</strong> Pour chaque expérience, la référence couvre les 400 premières secondes, en s'arrêtant au moins 10 s avant le défaut. On apprend le modèle sur 75 % de la référence et on fixe le seuil sur les 25 % restants (quantile 99,5 % du score).</li>
+<li><strong>Indicateurs causaux</strong>, calculés seulement sur le passé, comme en surveillance en ligne. Pour chaque capteur :</li>
+<li><strong>écart</strong> = moyenne des 10 dernières secondes − moyenne des 120 secondes précédentes ; il réagit aux changements brusques et ignore les dérives lentes ;</li>
+<li><strong>écart-type</strong> des 10 dernières secondes ; il est sensible aux fluctuations.</li>
+<li><strong>Détecteurs</strong> entraînés sur l'état sain uniquement :</li>
+<li><strong>T² de Hotelling</strong> : distance de Mahalanobis avec covariance régularisée par Ledoit-Wolf. C'est la méthode de référence de la maîtrise statistique multivariée des procédés.</li>
+<li><strong>Isolation Forest</strong>, pour comparaison.</li>
+<li><strong>Règle d'alarme</strong> : le score doit dépasser le seuil pendant <strong>10 s consécutives</strong> (persistance).</li>
+<li><strong>Groupes de capteurs comparés</strong> : vibration, électrique, hydraulique, thermique, vibration + électrique, tous les capteurs. Le groupe vibration + hydraulique a été ajouté <strong>après</strong> lecture des premiers résultats : c'est une hypothèse <em>a posteriori</em>, signalée comme telle.</li>
+<li><strong>Jeu de développement.</strong> Les réglages (type d'indicateur, persistance, quantile) ont été choisis <strong>uniquement sur les 16 expériences d'obstruction à l'aspiration</strong>. Les résultats sont aussi donnés sur les 18 autres expériences (« test »).</li>
+</ol>
+<h3>Métriques</h3>
+<table>
+<thead>
+<tr>
+<th>Métrique</th>
+<th>Définition</th>
+<th>Pourquoi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Détection stricte</strong></td>
+<td>La <strong>première</strong> alarme après la référence tombe pendant le défaut</td>
+<td>C'est ce que vit l'opérateur : une alarme qui sonne avant le défaut est une fausse alarme, même si une autre suit pendant le défaut</td>
+</tr>
+<tr>
+<td>Détection</td>
+<td>Au moins une alarme pendant le défaut</td>
+<td>Plus indulgente</td>
+</tr>
+<tr>
+<td>Délai</td>
+<td>Temps entre le début du défaut et la première alarme</td>
+<td>Temps gagné pour réagir</td>
+</tr>
+<tr>
+<td>Fausses alarmes par heure (FA/h)</td>
+<td>Épisodes d'alarme pendant le fonctionnement sain, rapportés à sa durée</td>
+<td>Coût de la surveillance pour l'équipe</td>
+</tr>
+<tr>
+<td>F1, FAR, MAR point par point</td>
+<td>Métriques du benchmark SKAB</td>
+<td>Comparaison avec la littérature</td>
+</tr>
+</tbody>
+</table>
+<h2>5. Résultats</h2>
+<h3>Signatures des défauts</h3>
+<figure class="fig fig-img"><a href="../projets/projet-1/fig/fig_signatures.png" target="_blank" rel="noopener"><img src="../projets/projet-1/fig/fig_signatures.png" alt="Carte des effets standardisés de chaque mode sur chaque capteur"></a><figcaption>Effet de chaque défaut sur chaque capteur : écart entre la moyenne pendant le défaut et la minute qui précède, divisé par l'écart-type de la référence (médiane par mode).</figcaption></figure>
+
+<ul>
+<li><strong>Balourd</strong> : vibration multipliée (effet ≈ +110 écarts-types) ; le reste ne bouge presque pas.</li>
+<li><strong>Cavitation</strong> : effondrement du débit (−44).</li>
+<li><strong>Fluide trop chaud</strong> et <strong>hausse du niveau</strong> : température du fluide (+209 et +11) et débit.</li>
+<li><strong>Obstructions et fuites</strong> : seulement le débit (−3 à −5).</li>
+<li><strong>Courant et tension</strong> : aucun effet notable (|effet| ≤ 0,3), quel que soit le mode.</li>
+</ul>
+<p>Ces signatures donnent une première <strong>règle de diagnostic</strong> : quel capteur a bougé, et dans quel sens.</p>
+<h3>Comparaison des groupes de capteurs</h3>
+<figure class="fig fig-img"><a href="../projets/projet-1/fig/fig_groupes.png" target="_blank" rel="noopener"><img src="../projets/projet-1/fig/fig_groupes.png" alt="Détection stricte et fausses alarmes par groupe de capteurs"></a><figcaption>Détection stricte (34 expériences) et fausses alarmes par heure, détecteur T², référence locale.</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>Groupe (T², référence locale)</th>
+<th>Détection stricte</th>
+<th>Détection</th>
+<th>Délai médian</th>
+<th>FA/h</th>
+<th>Détection stricte sur le jeu test (18 exp.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vibration</td>
+<td>26 %</td>
+<td>53 %</td>
+<td>15 s</td>
+<td>10,0</td>
+<td>39 %</td>
+</tr>
+<tr>
+<td>Électrique</td>
+<td>15 %</td>
+<td>15 %</td>
+<td>190 s</td>
+<td>0,0</td>
+<td>17 %</td>
+</tr>
+<tr>
+<td>Hydraulique</td>
+<td>79 %</td>
+<td>94 %</td>
+<td>34 s</td>
+<td>3,1</td>
+<td>72 %</td>
+</tr>
+<tr>
+<td>Thermique</td>
+<td>24 %</td>
+<td>62 %</td>
+<td>44 s</td>
+<td>13,1</td>
+<td>22 %</td>
+</tr>
+<tr>
+<td>Vibration + électrique</td>
+<td>41 %</td>
+<td>59 %</td>
+<td>21 s</td>
+<td>6,9</td>
+<td>56 %</td>
+</tr>
+<tr>
+<td>Tous les capteurs</td>
+<td>68 %</td>
+<td>97 %</td>
+<td>14 s</td>
+<td>8,7</td>
+<td>72 %</td>
+</tr>
+<tr>
+<td>Vibration + hydraulique <em>(a posteriori)</em></td>
+<td><strong>82 %</strong></td>
+<td>97 %</td>
+<td>25 s</td>
+<td>7,5</td>
+<td>78 %</td>
+</tr>
+</tbody>
+</table>
+<p>Avec les mêmes capteurs, <strong>Isolation Forest</strong> fait moins bien que le T² dans 6 groupes sur 7 (par exemple 50 % contre 68 % pour tous les capteurs). La seule exception est le groupe thermique, où les deux méthodes sont faibles (26 % contre 24 %).</p>
+<h3>Matrice de détectabilité et indice D</h3>
+<figure class="fig fig-img"><a href="../projets/projet-1/fig/fig_detectabilite.png" target="_blank" rel="noopener"><img src="../projets/projet-1/fig/fig_detectabilite.png" alt="Matrice mode par groupe de capteurs avec taux de détection et indice D"></a><figcaption>Détection stricte par mode et par groupe de capteurs, et indice D proposé. Les modes avec n = 1 ou 2 donnent des taux très incertains.</figcaption></figure>
+
+<p>Convention du projet pour traduire la mesure en indice D de l'AMDEC (1 = très bien détecté, 4 = non détecté) :</p>
+<table>
+<thead>
+<tr>
+<th>D</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Détection stricte ≥ 90 % et délai médian ≤ 60 s</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Détection stricte ≥ 70 %</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Détection stricte ≥ 40 %</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Détection stricte &lt; 40 %</td>
+</tr>
+</tbody>
+</table>
+<h3>Compromis entre détection et fausses alarmes</h3>
+<figure class="fig fig-img"><a href="../projets/projet-1/fig/fig_compromis.png" target="_blank" rel="noopener"><img src="../projets/projet-1/fig/fig_compromis.png" alt="Courbes détection stricte en fonction des fausses alarmes par heure"></a><figcaption>Effet de la persistance de l'alarme (1, 5, 10, 20 s) pour les deux types d'indicateurs, tous capteurs, T².</figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th>Indicateurs, persistance</th>
+<th>F1 point par point</th>
+<th>Détection stricte</th>
+<th>FA/h</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Niveau, 1 s</td>
+<td>0,78</td>
+<td>24 %</td>
+<td>82,9</td>
+</tr>
+<tr>
+<td>Niveau, 10 s</td>
+<td>0,78</td>
+<td>50 %</td>
+<td>18,7</td>
+</tr>
+<tr>
+<td>Écart, 10 s (réglage retenu)</td>
+<td>0,51</td>
+<td>68 %</td>
+<td>8,7</td>
+</tr>
+<tr>
+<td>Écart, 20 s</td>
+<td>0,46</td>
+<td>74 %</td>
+<td>4,4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Le F1 point par point est trompeur pour la maintenance.</strong> Les indicateurs de niveau obtiennent le meilleur F1 (0,78), au niveau du meilleur algorithme du classement SKAB. Ils restent en alarme pendant tout le défaut, ce que le F1 récompense, mais ils déclenchent aussi jusqu'à 83 fausses alarmes par heure. Les indicateurs d'écart signalent le <strong>début</strong> du défaut, ce qui intéresse la maintenance. À persistance égale, ils déclenchent environ deux fois moins de fausses alarmes et détectent plus souvent le défaut en premier.</p>
+<p><strong>Contrôle de cohérence avec le benchmark.</strong> Avec le protocole SKAB (apprentissage sur les 400 premiers points, valeurs brutes, T², seuil au quantile 99 %), notre implémentation obtient F1 = 0,76, FAR = 0,48 et MAR = 0,13. Le classement publié par SKAB donne F1 = 0,66 pour le T² et 0,76 pour le T² + Q [1]. Notre code se situe dans le même ordre de grandeur ; les écarts viennent des détails d'implémentation (covariance régularisée, seuil).</p>
+<h3>Référence locale ou globale ?</h3>
+<p>Un modèle appris sur le fichier sain du 8 février, puis appliqué à toutes les expériences, ne donne plus que <strong>32 %</strong> de détection stricte (tous capteurs), contre 68 % avec la référence locale. Le tableau du contrôle qualité l'explique : le débit passe de 127 à 32 L/min selon le jour, et la vibration de 0,23 à 0,03 g. <strong>Un modèle de l'état sain ne vaut que pour le point de fonctionnement où il a été appris.</strong></p>
+<h3>Exemple</h3>
+<figure class="fig fig-img"><a href="../projets/projet-1/fig/fig_exemple_score.png" target="_blank" rel="noopener"><img src="../projets/projet-1/fig/fig_exemple_score.png" alt="Score T², seuil et alarmes pour une obstruction au refoulement"></a><figcaption>Obstruction au refoulement (valve2/0) : la première alarme arrive 9 s après le début du défaut. Une alarme apparaît aussi juste après la fin du défaut, pendant le retour au régime normal.</figcaption></figure>
+
+<h2>6. Analyse des erreurs (configuration vibration + hydraulique)</h2>
+<p>Six expériences sur 34 échouent au critère strict :</p>
+<table>
+<thead>
+<tr>
+<th>Expérience</th>
+<th>Mode</th>
+<th>Cause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>other/4, other/8, other/11, valve1/14, valve2/1</td>
+<td>Fuite, balourd, niveau, obstructions</td>
+<td><strong>Faux positif</strong> : alarme pendant le fonctionnement normal avant le défaut (1 à 3 épisodes). Le défaut est ensuite bien détecté.</td>
+</tr>
+<tr>
+<td>valve1/2</td>
+<td>Obstruction à l'aspiration</td>
+<td><strong>Faux négatif</strong> : aucune alarme pendant le défaut. L'effet sur le débit est très faible, et ce fichier contient un trou d'enregistrement de 76 s.</td>
+</tr>
+</tbody>
+</table>
+<p>La plupart des échecs sont donc des <strong>fausses alarmes</strong>, pas des défauts manqués. C'est l'argument pour une persistance plus longue (20 s) quand l'équipe de maintenance préfère un léger retard à une alarme inutile.</p>
+<h2>7. Hypothèses : bilan</h2>
+<table>
+<thead>
+<tr>
+<th>Hypothèse</th>
+<th>Verdict</th>
+<th>Élément de preuve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1. Le courant moteur suffit pour détecter les défauts</td>
+<td><strong>Rejetée</strong> sur ce banc</td>
+<td>15 % de détection stricte ; effets ≤ 0,3 écart-type. Avec des valeurs efficaces à 1 Hz, la signature du courant est noyée dans ses fluctuations normales (écart-type médian ≈ 0,28 A).</td>
+</tr>
+<tr>
+<td>H2. La vibration est le bon capteur des défauts mécaniques</td>
+<td><strong>Confirmée</strong> pour le balourd</td>
+<td>Effet ≈ +110 ; délai ≈ 9 s. En revanche, 0 à 12 % sur les obstructions.</td>
+</tr>
+<tr>
+<td>H3. Les capteurs hydrauliques détectent les défauts de process</td>
+<td><strong>Confirmée</strong></td>
+<td>88 à 100 % sur les obstructions, 75 % sur les fuites, 100 % sur la cavitation</td>
+</tr>
+<tr>
+<td>H4. Fusionner tous les capteurs améliore toujours la détection</td>
+<td><strong>Rejetée</strong></td>
+<td>Tous les capteurs : 68 % ; hydraulique seul : 79 %. Les capteurs peu informatifs (thermiques, électriques) ajoutent surtout des fausses alarmes. Une fusion <strong>choisie</strong> (vibration + hydraulique : 82 %) fait mieux.</td>
+</tr>
+<tr>
+<td>H5. Une référence apprise un autre jour reste valable</td>
+<td><strong>Rejetée</strong></td>
+<td>32 % contre 68 % ; changement de point de fonctionnement</td>
+</tr>
+</tbody>
+</table>
+<h2>8. Retour vers l'AMDEC</h2>
+<p>Les fréquences (F) et les gravités (G) ci-dessous sont des <strong>cotations pédagogiques</strong> à confirmer par un retour d'expérience. Seul l'indice D « avec surveillance » est <strong>mesuré</strong> par ce projet (configuration vibration + hydraulique).</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>F</th>
+<th>G</th>
+<th>D sans surveillance</th>
+<th>C avant</th>
+<th>D mesuré</th>
+<th>C après</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Obstruction à l'aspiration</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>36</td>
+<td>2</td>
+<td>18</td>
+</tr>
+<tr>
+<td>Obstruction au refoulement</td>
+<td>2</td>
+<td>2</td>
+<td>4</td>
+<td>16</td>
+<td>2</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Fuite</td>
+<td>3</td>
+<td>2</td>
+<td>4</td>
+<td>24</td>
+<td>2</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Balourd du rotor</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>24</td>
+<td>2</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Hausse du niveau d'eau</td>
+<td>2</td>
+<td>1</td>
+<td>4</td>
+<td>8</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Cavitation</td>
+<td>2</td>
+<td>4</td>
+<td>4</td>
+<td>32</td>
+<td>1</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Fluide trop chaud</td>
+<td>1</td>
+<td>3</td>
+<td>4</td>
+<td>12</td>
+<td>1</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>C = F × G × D. Avec quatre capteurs, la criticité de chaque mode baisse de 25 à 75 %.</p>
+<h2>9. Recommandations de maintenance</h2>
+<ol>
+<li><strong>Installer d'abord un débitmètre</strong> sur les pompes critiques : c'est le capteur le plus informatif pour les défauts de process (obstructions, fuites, cavitation), avec peu de fausses alarmes.</li>
+<li><strong>Ajouter la vibration</strong> sur les machines exposées aux défauts mécaniques. Le balourd y est détecté en une dizaine de secondes.</li>
+<li><strong>Ne pas compter sur le courant efficace à 1 Hz</strong> pour la surveillance mécanique ou hydraulique. Pour une surveillance électrique, il faut une acquisition rapide (plusieurs kHz) et une analyse spectrale (MCSA), comme le prévoyait le jeu de Twente.</li>
+<li><strong>Réapprendre la référence</strong> après chaque intervention et à chaque changement de point de fonctionnement (consigne du variateur, vannes), ou tenir une référence par régime.</li>
+<li><strong>Régler la persistance avec l'équipe</strong> : 10 s pour détecter vite, 20 s pour réduire les fausses alarmes de moitié.</li>
+<li><strong>Évaluer un système de surveillance par événement</strong> (détection stricte, délai, fausses alarmes par heure), et non par un F1 point par point.</li>
+</ol>
+<h2>10. Limites</h2>
+<ul>
+<li><strong>Défauts provoqués en laboratoire</strong>, sur un seul banc : la généralisation à une installation industrielle reste à démontrer.</li>
+<li><strong>Effectifs faibles</strong> pour certains modes (1 ou 2 expériences) : les taux correspondants sont très incertains.</li>
+<li>Signaux <strong>efficaces à 1 Hz</strong> : pas d'analyse spectrale ; nos conclusions sur le courant ne valent que pour ce type de mesure.</li>
+<li>Réglages choisis sur le mode « obstruction à l'aspiration » ; le groupe vibration + hydraulique est une hypothèse <em>a posteriori</em>, à confirmer sur de nouvelles données.</li>
+<li>Trous d'enregistrement non traités : les fenêtres glissantes les ignorent.</li>
+<li>Ni diagnostic automatique du mode ni estimation de la RUL : les données ne contiennent pas de dégradation jusqu'à la panne.</li>
+</ul>
+<h2>11. Reproduire les résultats</h2>
+<pre><code>python telecharger_donnees.py      # clone le dépôt SKAB (18 Mo)
+pip install -r requirements.txt
+python run_all.py                  # ≈ 1 min : tableaux, figures, resume_chiffres.md
+</code></pre>
+<p><a class="btn" href="../projets/projet-1/projet-pompe.zip" download>Télécharger le code du projet (zip, 3,4 Mo)</a></p>
+<p>L'archive contient le code complet (Python), les tableaux de résultats, les figures, le README et un Dockerfile. Les données SKAB ne sont pas incluses : la première commande ci-dessus les télécharge. Tous les chiffres de cette page figurent dans <code>resultats/resume_chiffres.md</code>, généré par le code.</p>
+<h2>Vidéos et ressources</h2>
+<p>Sélection de l'équipe pour approfondir cette partie. Les vidéos appartiennent à leurs auteurs et s'ouvrent sur YouTube.</p>
+<ul class="res"><li><span><a href="https://www.youtube.com/watch?v=RmktDvMrhGw" target="_blank" rel="noopener">Principe du T² de Hotelling, illustré par un exemple de test statistique</a> <span class="src">· vidéo, anglais</span></span></li><li><span><a href="https://www.youtube.com/watch?v=slnbeYbvNcM" target="_blank" rel="noopener">Carte de contrôle multivariée T² de Hotelling (exemple sous R)</a> <span class="src">· vidéo, anglais</span></span></li><li><span><a href="https://www.youtube.com/watch?v=Y1x51i1936M" target="_blank" rel="noopener">Isolation Forests: Identify Outliers in Data</a> <span class="src">· vidéo, anglais</span></span></li><li><span><a href="https://www.youtube.com/watch?v=0lb2kCBg_W8" target="_blank" rel="noopener">Isolation Forest Explained with iTrees & Step-by-Step Calculations</a> <span class="src">· vidéo, anglais</span></span></li><li><span><a href="https://www.youtube.com/watch?v=xkBnWhqg9FA" target="_blank" rel="noopener">Motor Current Signature Analysis (MCSA) — formation</a> <span class="src">· vidéo, anglais</span></span></li><li class="doc"><span><a href="https://github.com/waico/SKAB" target="_blank" rel="noopener">Dépôt du jeu de données SKAB</a> <span class="src">· GitHub</span></span></li><li class="doc"><span><a href="https://fr.wikipedia.org/wiki/Distance_de_Mahalanobis" target="_blank" rel="noopener">Distance de Mahalanobis</a> <span class="src">· Wikipédia</span></span></li></ul>
+
+<h2>Références</h2>
+<ol class="refs">
+<li>[1] I. D. Katser et V. O. Kozitsin, « Skoltech Anomaly Benchmark (SKAB) », Kaggle, 2020, doi : 10.34740/KAGGLE/DSV/1693952. <a class="reflink" href="https://doi.org/10.34740/KAGGLE/DSV/1693952" target="_blank" rel="noopener">DOI ↗</a></li>
+<li>[2] H. Hotelling, « Multivariate quality control illustrated by the air testing of sample bombsights », dans <i>Techniques of Statistical Analysis</i>, C. Eisenhart, M. W. Hastay et W. A. Wallis, éd. New York : McGraw-Hill, 1947, p. 111-184. <a class="reflink" href="https://scholar.google.com/scholar?q=Hotelling%20Multivariate%20quality%20control%20illustrated%20by%20the%20air%20testing%20of%20sample%20bombsights" target="_blank" rel="noopener">Google Scholar ↗</a></li>
+<li>[3] O. Ledoit et M. Wolf, « A well-conditioned estimator for large-dimensional covariance matrices », <i>J. Multivariate Anal.</i>, vol. 88, n° 2, p. 365-411, 2004. <a class="reflink" href="https://doi.org/10.1016/S0047-259X(03)00096-4" target="_blank" rel="noopener">DOI ↗</a></li>
+<li>[4] F. T. Liu, K. M. Ting et Z.-H. Zhou, « Isolation Forest », dans <i>Proc. 8th IEEE Int. Conf. Data Mining (ICDM)</i>, Pise, 2008, p. 413-422. <a class="reflink" href="https://doi.org/10.1109/ICDM.2008.17" target="_blank" rel="noopener">DOI ↗</a></li>
+<li>[5] F. Pedregosa <i>et al.</i>, « Scikit-learn: Machine learning in Python », <i>J. Mach. Learn. Res.</i>, vol. 12, p. 2825-2830, 2011. <a class="reflink" href="https://jmlr.org/papers/v12/pedregosa11a.html" target="_blank" rel="noopener">JMLR ↗</a></li>
+<li>[6] IEC, <i>IEC 60812:2018 — Failure modes and effects analysis (FMEA and FMECA)</i>, 3ᵉ éd., Genève : IEC, 2018. <a class="reflink" href="https://webstore.iec.ch/en/publication/26359" target="_blank" rel="noopener">IEC ↗</a></li>
+</ol>
+</article>
+<footer>Khalil Saidi et Wassim Bergaoui · École Polytechnique de Sousse · 2026–2027</footer>
+</div>
+</body>
+</html>
