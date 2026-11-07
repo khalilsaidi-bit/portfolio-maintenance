@@ -210,17 +210,9 @@ C = F × G × D. Avec quatre capteurs, la criticité de chaque mode baisse de 25
 - Trous d'enregistrement non traités : les fenêtres glissantes les ignorent.
 - Ni diagnostic automatique du mode ni estimation de la RUL : les données ne contiennent pas de dégradation jusqu'à la panne.
 
-## 11. Reproduire les résultats
+## 11. Code du projet
 
-```
-python telecharger_donnees.py      # clone le dépôt SKAB (18 Mo)
-pip install -r requirements.txt
-python run_all.py                  # ≈ 1 min : tableaux, figures, resume_chiffres.md
-```
-
-<a class="btn" href="projets/projet-1/projet-pompe.zip" download>Télécharger le code du projet (zip, 3,4 Mo)</a>
-
-L'archive contient le code complet (Python), les tableaux de résultats, les figures, le README et un Dockerfile. Les données SKAB ne sont pas incluses : la première commande ci-dessus les télécharge. Tous les chiffres de cette page figurent dans `resultats/resume_chiffres.md`, généré par le code.
+L'analyse a été réalisée avec un programme Python écrit par l'équipe (lecture et contrôle des données, indicateurs, détecteurs, métriques, figures). Le code n'est pas diffusé publiquement ; il peut être communiqué sur demande auprès des auteurs.
 
 ## Vidéos et ressources
 

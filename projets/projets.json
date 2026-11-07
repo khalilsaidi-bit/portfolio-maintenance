@@ -36,12 +36,7 @@
           "url": "https://github.com/waico/SKAB"
         }
       ],
-      "fichiers": [
-        {
-          "label": "Code et résultats du projet (zip)",
-          "chemin": "projets/projet-1/projet-pompe.zip"
-        }
-      ]
+      "fichiers": []
     },
     {
       "id": "projet-2",
