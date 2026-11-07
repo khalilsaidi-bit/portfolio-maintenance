@@ -218,7 +218,9 @@ pip install -r requirements.txt
 python run_all.py                  # ≈ 1 min : tableaux, figures, resume_chiffres.md
 ```
 
-Le code complet (Python), les tableaux de résultats et un Dockerfile sont dans l'archive `projet-pompe.zip`, rangée dans le dossier `projets/projet-1/` du portfolio. Tous les chiffres de cette page figurent dans `resultats/resume_chiffres.md`, généré par le code.
+<a class="btn" href="projets/projet-1/projet-pompe.zip" download>Télécharger le code du projet (zip, 3,4 Mo)</a>
+
+L'archive contient le code complet (Python), les tableaux de résultats, les figures, le README et un Dockerfile. Les données SKAB ne sont pas incluses : la première commande ci-dessus les télécharge. Tous les chiffres de cette page figurent dans `resultats/resume_chiffres.md`, généré par le code.
 
 ## Références
 
