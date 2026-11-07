@@ -155,7 +155,7 @@ En Tunisie, l'organisme national de normalisation est l'INNORPI. Avant de citer 
 <ol class="refs">
 <li>[1] AFNOR, <i>NF EN 13306 — Maintenance — Terminologie de la maintenance</i>, version française de l'EN 13306:2017, La Plaine Saint-Denis : AFNOR.</li>
 <li>[2] J. Moubray, <i>Reliability-Centred Maintenance</i>, 2ᵉ éd. Oxford : Butterworth-Heinemann, 1997.</li>
-<li>[3] F. Ben Hmida, <i>Maintenance industrielle — Chap. 1 : Concepts de base sur la maintenance</i>, support de cours, ENSIT, 2024.</li>
+<li>[3] F. Ben Hmida, <i>Maintenance industrielle — Chap. 1 : Concepts de base sur la maintenance</i>, support de cours, 2024.</li>
 <li>[4] F. S. Nowlan et H. F. Heap, « Reliability-Centered Maintenance », U.S. Department of Defense, rapport AD-A066579, 1978.</li>
 <li>[5] AFNOR, <i>NF X60-000 — Maintenance industrielle — Fonction maintenance</i>, avril 2016.</li>
 <li>[6] AFNOR, <i>NF EN 15341 — Maintenance — Indicateurs de performance clés pour la maintenance</i>, 2019, amendement A1, 2022.</li>

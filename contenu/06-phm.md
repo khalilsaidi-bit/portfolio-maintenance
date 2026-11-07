@@ -104,7 +104,7 @@ Les jeux C-MAPSS sont simulés : ils sont excellents pour comparer des algorithm
 
 <ol class="refs">
 <li>[1] ISO, <i>ISO 13374 — Condition monitoring and diagnostics of machines — Data processing, communication and presentation</i>, parties 1 à 4. Genève : ISO.</li>
-<li>[2] F. Ben Hmida, <i>Maintenance industrielle — Chap. 4 : Maintenance prédictive (partie PHM)</i>, support de cours, ENSIT, 2024.</li>
+<li>[2] F. Ben Hmida, <i>Maintenance industrielle — Chap. 4 : Maintenance prédictive (partie PHM)</i>, support de cours, 2024.</li>
 <li>[3] Y. Lei, N. Li, L. Guo, N. Li, T. Yan et J. Lin, « Machinery health prognostics: A systematic review from data acquisition to RUL prediction », <i>Mech. Syst. Signal Process.</i>, vol. 104, p. 799-834, 2018.</li>
 <li>[4] A. Saxena, K. Goebel, D. Simon et N. Eklund, « Damage propagation modeling for aircraft engine run-to-failure simulation », dans <i>Proc. Int. Conf. Prognostics and Health Management (PHM08)</i>, Denver, CO, 2008.</li>
 <li>[5] A. Saxena, J. Celaya, B. Saha, S. Saha et K. Goebel, « Metrics for offline evaluation of prognostic performance », <i>Int. J. Prognostics Health Manag.</i>, vol. 1, n° 1, 2010.</li>

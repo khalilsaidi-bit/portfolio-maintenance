@@ -155,5 +155,5 @@ Le guide des bonnes pratiques d'exploitation et de maintenance du Département d
 <li>[4] G. P. Sullivan, R. Pugh, A. P. Melendez et W. D. Hunt, <i>Operations &amp; Maintenance Best Practices — A Guide to Achieving Operational Efficiency</i>, Release 3.0, U.S. DOE, Federal Energy Management Program, 2010.</li>
 <li>[5] ISO, <i>ISO 20816-3:2022 — Mechanical vibration — Measurement and evaluation of machine vibration — Part 3: Industrial machines with a power rating above 15 kW and operating speeds between 120 r/min and 30 000 r/min</i>. Genève : ISO, 2022.</li>
 <li>[6] ISO, <i>ISO 17359:2018 — Condition monitoring and diagnostics of machines — General guidelines</i>. Genève : ISO, 2018.</li>
-<li>[7] F. Ben Hmida, <i>Maintenance industrielle — Chap. 4 : Maintenance prédictive</i>, support de cours, ENSIT, 2024.</li>
+<li>[7] F. Ben Hmida, <i>Maintenance industrielle — Chap. 4 : Maintenance prédictive</i>, support de cours, 2024.</li>
 </ol>

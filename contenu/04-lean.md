@@ -154,6 +154,6 @@ Ces démarches se combinent. Les 5S et la TPM créent les conditions de terrain.
 <li>[2] F. S. Nowlan et H. F. Heap, « Reliability-Centered Maintenance », U.S. Department of Defense, rapport AD-A066579, 1978.</li>
 <li>[3] SAE International, <i>SAE JA1011 — Evaluation Criteria for Reliability-Centered Maintenance (RCM) Processes</i>, révision d’août 2009.</li>
 <li>[4] J. Moubray, <i>Reliability-Centred Maintenance</i>, 2ᵉ éd. Oxford : Butterworth-Heinemann, 1997.</li>
-<li>[5] F. Ben Hmida, <i>Maintenance industrielle — Chap. 3 : Lean Maintenance</i>, support de cours, ENSIT, 2024.</li>
+<li>[5] F. Ben Hmida, <i>Maintenance industrielle — Chap. 3 : Lean Maintenance</i>, support de cours, 2024.</li>
 <li>[6] J.-F. Barbet, « Tour d'horizon des méthodes d'optimisation de maintenance », formation OMF, INSA, 2021.</li>
 </ol>

@@ -110,5 +110,5 @@ Les principaux freins sont les suivants :
 <li>[4] Schneider Electric, « Schneider Electric transforme son site du Vaudreuil en vitrine de l'Industrie du Futur grâce à ses offres EcoStruxure for Industry », communiqué de presse, 3 avr. 2018. [En ligne]. Disponible : https://www.se.com/ww/fr/about-us/newsroom/news/press-releases/</li>
 <li>[5] Schneider Electric, « New recognition for Schneider Electric from World Economic Forum », communiqué de presse, mars 2022. [En ligne]. Disponible : https://www.se.com/ww/en/about-us/newsroom/</li>
 <li>[6] McKinsey &amp; Company, « Manufacturing: Analytics unleashes productivity and profitability », 2017.</li>
-<li>[7] F. Ben Hmida, <i>Maintenance industrielle — Chap. 2 : Maintenance 4.0</i>, support de cours, ENSIT, 2024.</li>
+<li>[7] F. Ben Hmida, <i>Maintenance industrielle — Chap. 2 : Maintenance 4.0</i>, support de cours, 2024.</li>
 </ol>

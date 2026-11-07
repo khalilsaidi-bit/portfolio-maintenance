@@ -242,7 +242,7 @@ Quand les données sont rares, l'approche bayésienne combine une **connaissance
 <li>[3] G. Landy, <i>AMDEC : guide pratique</i>, 2ᵉ éd. La Plaine Saint-Denis : AFNOR, 2007.</li>
 <li>[4] M. Rausand et A. Høyland, <i>System Reliability Theory: Models, Statistical Methods, and Applications</i>, 2ᵉ éd. Hoboken, NJ : Wiley, 2004.</li>
 <li>[5] IEC, <i>IEC 61025:2006 — Fault tree analysis (FTA)</i> ; <i>IEC 61078:2016 — Reliability block diagrams</i> ; <i>IEC 61165:2006 — Application of Markov techniques</i>. Genève : IEC.</li>
-<li>[6] F. Ben Hmida, <i>Sûreté de fonctionnement</i>, support de cours (chap. 0 à 8) et TD 1 à 3, ENSIT.</li>
-<li>[7] F. Ben Hmida, <i>Estimation des indices FMDS</i>, support de formation, ENSIT, oct. 2025.</li>
+<li>[6] F. Ben Hmida, <i>Sûreté de fonctionnement</i>, support de cours (chap. 0 à 8) et TD 1 à 3.</li>
+<li>[7] F. Ben Hmida, <i>Estimation des indices FMDS</i>, support de formation, oct. 2025.</li>
 <li>[8] E. L. Kaplan et P. Meier, « Nonparametric estimation from incomplete observations », <i>J. Amer. Statist. Assoc.</i>, vol. 53, n° 282, p. 457-481, 1958.</li>
 </ol>
