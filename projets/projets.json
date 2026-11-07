@@ -1,5 +1,5 @@
 {
-  "_aide": "Trois emplacements. Pour ajouter un projet prêt : remplir l'emplacement libre (voir projets/GUIDE-AJOUT.md). Ne pas supprimer d'emplacement.",
+  "_aide": "Quatre emplacements. Pour ajouter un projet prêt : remplir l'emplacement libre (voir projets/GUIDE-AJOUT.md). Ne pas supprimer d'emplacement.",
   "emplacements": [
     {
       "id": "projet-1",
@@ -46,12 +46,28 @@
     {
       "id": "projet-2",
       "repere": "PRJ-02",
-      "libre": true
+      "libre": true,
+      "equipe": [
+        "Jasser Hadj Ali",
+        "Mahmoud Hammouda"
+      ]
     },
     {
       "id": "projet-3",
       "repere": "PRJ-03",
-      "libre": true
+      "libre": true,
+      "equipe": [
+        "Eya Abdessalem",
+        "Sahar Jaziri"
+      ]
+    },
+    {
+      "id": "projet-4",
+      "repere": "PRJ-04",
+      "libre": true,
+      "equipe": [
+        "Ghaith Mouelhi"
+      ]
     }
   ]
 }

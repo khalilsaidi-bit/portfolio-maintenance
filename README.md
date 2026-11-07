@@ -10,11 +10,12 @@ contenu/
   sommaire.json         ordre et titres des sections du menu
   00-accueil.md …       une page Markdown par section
 projets/
-  projets.json          les 3 emplacements de projets (PRJ-01, PRJ-02, PRJ-03)
+  projets.json          les 4 emplacements de projets (PRJ-01 à PRJ-04)
   GUIDE-AJOUT.md        procédure pour ajouter un projet prêt
   projet-1/index.md     fiche du projet pompe (binôme du coordinateur)
   projet-2/             emplacement libre
   projet-3/             emplacement libre
+  projet-4/             emplacement libre (projet individuel)
 src/app.html            source de la page (copie utilisée pour l'aperçu en ligne)
 ```
 

@@ -161,7 +161,7 @@ main { min-width: 0; padding-block: var(--s-7); padding-left: max(var(--s-6), en
 .pager .next { text-align: right; grid-column: 2; }
 
 /* Plaques projets */
-.plates { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-4); margin-top: var(--s-5); }
+.plates { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-4); margin-top: var(--s-5); }
 .plate { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; text-decoration: none; color: var(--ink); min-width: 0; transition: border-color .15s, transform .15s; }
 .plate:hover { border-color: var(--accent); transform: translateY(-2px); }
 .plate-head { display: flex; justify-content: space-between; align-items: center; gap: var(--s-2); padding: var(--s-2) var(--s-4); border-bottom: 1px solid var(--rule); font-family: var(--f-mono); font-size: 0.78rem; letter-spacing: 0.06em; }
@@ -468,7 +468,8 @@ a.cite:hover { text-decoration: underline; }
   function plate(e) {
     if (e.libre) {
       return '<a class="plate free" href="#' + esc(e.id) + '"><div class="plate-head"><span>' + esc(e.repere) + '</span><span class="pill libre">Libre</span></div>' +
-        '<div class="plate-body"><p class="plate-title">Emplacement libre</p><p>Prêt à recevoir un projet terminé.</p><span class="btn ghost" style="justify-self:center">Ajouter un projet</span></div></a>';
+        '<div class="plate-body"><p class="plate-title">Emplacement libre</p><p>Prêt à recevoir un projet terminé.</p><span class="btn ghost" style="justify-self:center">Ajouter un projet</span></div>' +
+        (e.equipe && e.equipe.length ? '<div class="plate-foot">' + esc(e.equipe.join(" · ")) + "</div>" : "") + "</a>";
     }
     return '<a class="plate" href="#' + esc(e.id) + '"><div class="plate-head"><span>' + esc(e.repere) + '</span><span class="pill ' + esc(e.statut) + '">' + esc(STATUTS[e.statut] || e.statut) + "</span></div>" +
       '<div class="plate-body"><h3 class="plate-title">' + esc(e.titre) + "</h3>" +
@@ -481,9 +482,9 @@ a.cite:hover { text-decoration: underline; }
   function renderProjets() {
     var em = state.projets.emplacements;
     var libres = em.filter(function (e) { return e.libre; }).length;
-    show('<p class="eyebrow">Projets</p><h1 class="page-title">Les trois projets</h1>' +
-      '<div class="md"><p>Chaque binôme ou trinôme de l\'équipe mène un projet technique en lien avec la maintenance ou la prédiction des défaillances. ' +
-      (libres ? libres + (libres > 1 ? " emplacements sont libres et accueilleront" : " emplacement est libre et accueillera") + " les projets dès qu'ils seront prêts." : "Les trois projets sont en place.") + "</p></div>" +
+    show('<p class="eyebrow">Projets</p><h1 class="page-title">Les projets</h1>' +
+      '<div class="md"><p>Chaque binôme de l\'équipe, ainsi qu\'un membre en individuel, mène un projet technique en lien avec la maintenance ou la prédiction des défaillances. ' +
+      (libres ? libres + (libres > 1 ? " emplacements sont libres et accueilleront" : " emplacement est libre et accueillera") + " les projets dès qu'ils seront prêts." : "Tous les projets sont en place.") + "</p></div>" +
       '<div class="plates">' + em.map(plate).join("") + "</div>" + pager("projets"), true);
   }
 
@@ -506,6 +507,7 @@ a.cite:hover { text-decoration: underline; }
   function renderLibre(e) {
     var dossier = "projets/" + e.id + "/";
     show('<p class="eyebrow">' + esc(e.repere) + ' · <span class="pill libre">Libre</span></p><h1 class="page-title">Emplacement libre</h1>' +
+      (e.equipe && e.equipe.length ? '<p class="proj-sub">Réservé au projet de : ' + esc(e.equipe.join(", ")) + "</p>" : "") +
       '<div class="md"><p>Cet emplacement accueillera un projet terminé de l\'équipe. L\'ajout se fait en trois étapes, sans toucher au code du site.</p></div>' +
       '<ol class="steps">' +
       "<li><div><strong>Déposer les fichiers</strong> du projet dans le dossier <code>" + esc(dossier) + "</code> : fiche <code>index.md</code>, rapport PDF, images, archive du code.</div></li>" +
@@ -539,6 +541,7 @@ a.cite:hover { text-decoration: underline; }
       Object.keys(o).forEach(function (k) { if (o[k] === "" ) delete o[k]; });
       document.getElementById("f-out").textContent = JSON.stringify(o, null, 2);
     }
+    if (e.equipe && e.equipe.length) document.getElementById("f-equipe").value = e.equipe.join(", ");
     ids.forEach(function (id) { var el = document.getElementById(id); if (el) el.addEventListener("input", build); });
     document.getElementById("f-proj").addEventListener("submit", function (ev) { ev.preventDefault(); });
     document.getElementById("f-copy").addEventListener("click", function () {

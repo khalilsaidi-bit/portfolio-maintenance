@@ -6,13 +6,13 @@
 
 | Membre | Rôle | Sections | Projet |
 |---|---|---|---|
-| Khalil Saidi | Coordinateur | (à attribuer) | PRJ-01 |
-| Wassim Bergaoui | Membre | (à attribuer) | PRJ-01 |
-| (à compléter) | Membre | (à attribuer) | PRJ-02 |
-| (à compléter) | Membre | (à attribuer) | PRJ-02 |
-| (à compléter) | Membre | (à attribuer) | PRJ-03 |
-| (à compléter) | Membre | (à attribuer) | PRJ-03 |
-| (à compléter) | Membre | (à attribuer) | PRJ-02 ou PRJ-03 (trinôme) |
+| Khalil Saidi | Coordinateur | (à attribuer) | PRJ-01 (binôme) |
+| Wassim Bergaoui | Membre | (à attribuer) | PRJ-01 (binôme) |
+| Jasser Hadj Ali | Membre | (à attribuer) | PRJ-02 (binôme) |
+| Mahmoud Hammouda | Membre | (à attribuer) | PRJ-02 (binôme) |
+| Eya Abdessalem | Membre | (à attribuer) | PRJ-03 (binôme) |
+| Sahar Jaziri | Membre | (à attribuer) | PRJ-03 (binôme) |
+| Ghaith Mouelhi | Membre | (à attribuer) | PRJ-04 (individuel) |
 
 ## Calendrier (feuille de route du module)
 

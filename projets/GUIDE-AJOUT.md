@@ -1,6 +1,6 @@
 # Ajouter un projet prêt dans un emplacement libre
 
-Les emplacements PRJ-02 et PRJ-03 sont libres. Pour y placer un projet terminé :
+Les emplacements PRJ-02, PRJ-03 et PRJ-04 sont libres. Pour y placer un projet terminé :
 
 1. **Déposer les fichiers** dans le dossier de l'emplacement, par exemple `projets/projet-2/` :
    - `index.md` : la fiche du projet (optionnel mais recommandé) ;

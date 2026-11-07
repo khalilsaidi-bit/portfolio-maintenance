@@ -36,7 +36,7 @@ Le lien entre les deux mondes est l'**indice de détection D de l'AMDEC** : au l
 | Analyser les risques (AMDEC, arbre de défaillances) | Section 2 ; AMDEC de l'électropompe dans PRJ-01 |
 | Choisir et justifier une stratégie de maintenance | Sections 1 et 4 ; recommandations de PRJ-01 |
 | Connaître les outils de la maintenance 4.0 | Sections 3, 5 et 6 |
-| Analyser des données de maintenance (Python, MATLAB, Power BI) | Projet PRJ-01 (Python) ; projets PRJ-02 et PRJ-03 |
+| Analyser des données de maintenance (Python, MATLAB, Power BI) | Projet PRJ-01 (Python) ; projets PRJ-02, PRJ-03 et PRJ-04 |
 | Relier maintenance et performance énergétique | Section 7 |
 | Travailler en équipe et communiquer | Organisation de l'équipe, site du portfolio, présentation orale |
 
